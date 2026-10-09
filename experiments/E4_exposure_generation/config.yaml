@@ -1,0 +1,14 @@
+experiment: E4_exposure_generation
+seed: 20261004
+thermal:
+  scenarios: [S0, S1, S2, S3, S4, S5, S6, S7, S8]
+  durations_d: [7, 14, 28]
+  dt_min: 5.0
+  context_id: C1
+  transfer_sd_levels: [0.0, 0.35, 0.7, 1.4]   # STRESS grid (document 16A.8); keys carry '#st<level>'
+  mkt_ea_j_mol: null          # compendial Ea not yet registered => MKT reported as NaN
+fusion:
+  J: 200
+smoke:     # reduced sizes for plumbing checks (--smoke); never a scientific result
+  thermal: {scenarios: [S1, S3, S4, S6], durations_d: [28]}
+  fusion: {J: 24}

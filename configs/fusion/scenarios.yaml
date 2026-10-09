@@ -1,0 +1,22 @@
+# Storage-scenario definitions (document 11.7). Parametric scenarios are SIMULATED.
+# Fields marked status: ASSUMPTION are analyst-declared design parameters NOT given numerically in the
+# document; they are swept/reported, never described as evidence. Owner confirmation requested (docs/decisions/0001).
+durations_d: [7, 14, 28]
+scenarios:
+  S0: {id: S0, name: Refrigerated, kind: refrigerator_band, evidence_class: SIMULATED, context: C0,
+       params: {band_min_c: 2.0, band_max_c: 8.0, cycle_period_h: {value: 1.0, status: ASSUMPTION}}}
+  S1: {id: S1, name: Controlled room, kind: constant, evidence_class: SIMULATED, params: {temp_c: 25.0}}
+  S2: {id: S2, name: Warm constant, kind: constant, evidence_class: SIMULATED, params: {temp_c: 32.0}}
+  S3: {id: S3, name: Hot constant, kind: constant, evidence_class: SIMULATED, params: {temp_c: 37.0}}
+  S4: {id: S4, name: Diurnal cycling, kind: sinusoid, evidence_class: SIMULATED,
+       params: {tmin_c: 25.0, tmax_c: 37.0, period_h: 24.0, hour_of_max: {value: 15.0, status: ASSUMPTION}}}
+  S5: {id: S5, name: Reanalysis-driven real weather, kind: reanalysis_driven, evidence_class: COMPUTED, uses_climate: true,
+       blocked_on: "registered+verified climate source (S27/S28/S29), pre-registered location rule and 28-day window rule"}
+  S6: {id: S6, name: Heat-spike episodes, kind: heat_spikes, evidence_class: SIMULATED,
+       params: {base_c: 25.0, episode_min_h: 1.0, episode_max_h: 3.0, peak_min_c: 40.0, peak_max_c: 45.0,
+                episodes_per_week: {value: 3.0, status: ASSUMPTION}}}
+  S7: {id: S7, name: Warm transport, kind: transport_window, evidence_class: SIMULATED, context: C0,
+       params: {base_c: 5.0, window_temp_c: 35.0, window_min_h: 12.0, window_max_h: 24.0,
+                window_start_h: {value: 24.0, status: ASSUMPTION}}}
+  S8: {id: S8, name: Real-world benchmark, kind: published_benchmark, evidence_class: SIMULATED,
+       blocked_on: "published exposure description (S12): monthly temperature levels, daily range, duration [TO EXTRACT]"}

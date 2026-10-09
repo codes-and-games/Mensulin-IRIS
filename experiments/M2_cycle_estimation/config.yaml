@@ -1,0 +1,4 @@
+experiment: M2_cycle_estimation
+seed: 20261004
+n_placebo: 60
+smoke: {n_placebo: 10}

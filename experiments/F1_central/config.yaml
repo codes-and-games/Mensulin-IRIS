@@ -1,0 +1,17 @@
+experiment: F1_central
+seed: 20261004
+population: {h: 1.0}
+thermal: {scenarios: [S1, S2, S3, S4, S6, S7]}
+fusion:
+  J: 200
+  N: 20000
+  duration_d: 28
+  transfer_sd: 0.0
+  mode: shared
+  r_pb: 0.0
+  dosing_cases: [A, B]
+  isf_const: [1500, 1700, 1800]
+evidence_class_output: PROJECTED
+smoke:     # reduced sizes for plumbing checks (--smoke); never a scientific result
+  fusion: {J: 12}
+  thermal: {scenarios: [S3, S6]}

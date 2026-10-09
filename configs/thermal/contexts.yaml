@@ -1,0 +1,7 @@
+# Context mapping outdoor -> air next to the vial (document 12.7). Coefficients unresolved until L5/E2.
+C0: {desc: refrigerated compartment, class: SIMULATED, params: {status: UNRESOLVED, note: "[TO EXTRACT] label storage range + refrigerator survey"}}
+C1: {desc: indoor naturally ventilated, class: COMPUTED, form: damped_swing, gamma_range: {status: UNRESOLVED, note: "from ASHRAE DB II / IMAC (S31,S32)"}}
+C2: {desc: air-conditioned (optional), class: SIMULATED, params: {status: UNRESOLVED}}
+C3: {desc: carried on the person, class: SIMULATED, params: {status: UNRESOLVED, note: "[TO EXTRACT] clothing microclimate; schedule swept"}}
+C4: {desc: outdoor shaded, class: COMPUTED, form: offset, params: {status: UNRESOLVED, note: "[TO EXTRACT] shade studies"}}
+C5: {desc: sun-exposed / vehicle (STRESS ONLY), class: SIMULATED, form: offset, stress_only: true, params: {status: UNRESOLVED}}

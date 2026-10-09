@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use IRIS, please cite it as below and cite every dataset and paper listed in data/sources_registry.csv."
+title: "IRIS"
+version: 0.1.0
+date-released: "TO-FILL-AT-RELEASE"
+authors:
+  - family-names: "TO-FILL"
+    given-names: "TO-FILL"
+license: MIT
+repository-code: "https://github.com/YOUR-USER/iris"

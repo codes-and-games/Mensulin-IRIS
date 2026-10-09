@@ -1,0 +1,6 @@
+# Kinetic model K3: study-level inputs come from literature/degradation_literature.csv (experiment L2).
+# No parameters are defined here by hand.
+model: K3
+studies: []                 # populated by L2 only after primary-source extraction and review
+status: UNRESOLVED
+note: "fitting infrastructure in iris.thermal.kinetics; blocked until observations are extracted"

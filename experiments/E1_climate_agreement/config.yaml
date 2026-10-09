@@ -1,0 +1,3 @@
+experiment: E1_climate_agreement
+seed: 20261004
+sigma_val_test_only: 0.5     # TEST_ONLY placeholder used ONLY in test mode; the real value must be extracted from S36

@@ -1,0 +1,5 @@
+# Heterogeneity scenario 'high': multiplier on the reference between-person SD of phase contrast.
+# STRESS_TEST level (analyst-defined); 'mid' = reference. Not evidence.
+name: high
+multiplier: 2.0
+status: STRESS_TEST

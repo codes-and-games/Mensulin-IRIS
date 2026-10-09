@@ -1,0 +1,13 @@
+# Versions this repository was developed and tested with (pip freeze of the runtime subset)
+numpy==2.4.4
+scipy==1.17.1
+pandas==3.0.2
+pyarrow==25.0.1
+pydantic==2.13.5
+PyYAML==6.0.3
+statsmodels==0.15.0
+scikit-learn==1.8.0
+matplotlib==3.10.8
+SALib==1.6.0
+pytest==9.1.1
+hypothesis==6.168.3

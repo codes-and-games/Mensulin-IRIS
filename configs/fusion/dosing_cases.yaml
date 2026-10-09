@@ -1,0 +1,7 @@
+# Dosing cases (document 15.2). Definitions only; formulas are in iris.fusion.analytic.
+A: {name: "dose tracks need (D = R)", delta_u: "R * (1 - P)"}
+B: {name: "habitual dose (D = cycle-average requirement)", delta_u: "R - Dbar * P"}
+isf_models:
+  K_over_tdd_times_S: {K: [1500, 1700, 1800], status: ASSUMPTION}
+  isf_independent_of_tdd: {status: UNRESOLVED, note: "needs L4 empirical between-person ISF distribution"}
+  K_over_R_phase: {K: [1500, 1700, 1800], status: ASSUMPTION, role: control_returns_K_times_ell}

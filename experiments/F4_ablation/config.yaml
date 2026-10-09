@@ -1,0 +1,8 @@
+experiment: F4_ablation
+seed: 20261004
+population: {h: 1.0}
+scenario: S3
+fusion: {duration_d: 28, transfer_sd: 0.0, J: 200}
+thresholds_units: [2, 4, 8]
+smoke:     # reduced sizes for plumbing checks (--smoke); never a scientific result
+  fusion: {J: 12}

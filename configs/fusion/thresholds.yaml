@@ -1,0 +1,8 @@
+# Threshold grids (document 16.4). No single threshold privileged. Clinically motivated cut-offs
+# [TO EXTRACT] by the biology lead are added WITH citation; they are not invented here.
+units: [0.5, 1, 2, 4, 8]
+pct_tdd: [2.5, 5, 10, 20]
+glucose_mgdl: [10, 20, 30, 50]
+extra_thresholds_pending: {status: UNRESOLVED, note: "S24 clinical-significance definitions [TO EXTRACT]"}
+swing_bands: [0.25, 0.75, 0.90]    # band edges for swing percentile bands (document 16.5)
+tci_top_fraction: 0.20

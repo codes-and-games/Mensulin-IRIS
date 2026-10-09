@@ -1,0 +1,21 @@
+# --- raw and controlled data: NEVER commit (hashes live in data/manifest.csv) ---
+data/raw/**
+!data/raw/**/.gitkeep
+data/processed/**
+!data/processed/**/.gitkeep
+data/derived/*.parquet
+data/derived/*.json
+# --- credentials and local files ---
+kaggle.json
+.env
+*.pem
+# --- environments and caches ---
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+site/
+# TEST/provisional runs must never be committed as results: keep only production run folders you verified
+results/runs/*
+!results/runs/.gitkeep

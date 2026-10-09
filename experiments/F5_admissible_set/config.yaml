@@ -1,0 +1,14 @@
+experiment: F5_admissible_set
+seed: 20261004
+fusion: {duration_d: 28}
+n_eval: 1000
+max_grid_points: {E: 200, S: 400}
+lhs_points: 2000            # document: at least 2,000 points
+adversary_budget: 400
+adversary_popsize: 8
+population_completion: {profile_completion: two_anchor_cosine, concordance_sd: sd_from_concordance_normal, gamma_amplitude: 0.03, gamma_cv: 0.5, xi_sd: 0.03, anovulatory_prevalence: 0.0}
+smoke:     # reduced sizes for plumbing checks (--smoke); never a scientific result
+  n_eval: 400
+  max_grid_points: {E: 30, S: 60}
+  lhs_points: 40
+  adversary_budget: 60

@@ -1,0 +1,23 @@
+# IRIS base configuration. Parameters live here, not in source code.
+seed_global: 20261004
+run_mode: provisional        # production | provisional | test   (production refuses unverified inputs)
+paths:
+  registry: data/sources_registry.csv
+  manifest: data/manifest.csv
+  raw: data/raw
+  derived: data/derived
+  simulated: data/simulated
+  runs: results/runs
+evidence_class_vocabulary: [PUBLISHED, PUBLIC_DATASET, OPEN_RESOURCE, COMPUTED, SIMULATED, PROJECTED]
+environment:
+  python_min: "3.11"
+  float_dtype: float64
+monte_carlo:
+  J: 200
+  N: 20000
+  N_tail: 100000
+gaps:
+  hourly_gmax_h: 3          # ASSUMPTION (document 13.5)
+  daily_gmax_d: 1           # ASSUMPTION
+constants:
+  r_gas_j_per_mol_k: 8.314

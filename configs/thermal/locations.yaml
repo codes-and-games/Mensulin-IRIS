@@ -1,0 +1,4 @@
+# Locations are chosen by Koppen-Geiger class + coordinates by a rule PRE-REGISTERED before any download.
+# Never city names; never the team's own location. Coordinates are unresolved until the rule is frozen.
+selection_rule: {status: UNRESOLVED, note: "freeze in docs/prereg before downloading records"}
+locations: []

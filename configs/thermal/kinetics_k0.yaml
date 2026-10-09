@@ -1,0 +1,7 @@
+# Kinetic model K0: study-level inputs come from literature/degradation_literature.csv (experiment L2).
+# No parameters are defined here by hand.
+model: K0
+studies: []                 # populated by L2 only after primary-source extraction and review
+status: UNRESOLVED
+note: "fitting infrastructure in iris.thermal.kinetics; blocked until observations are extracted"
+# K0 additionally needs the list of credible studies reporting no measurable loss within the tested range.

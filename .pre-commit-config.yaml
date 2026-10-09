@@ -1,0 +1,14 @@
+repos:
+  - repo: local
+    hooks:
+      - id: iris-claims-lint
+        name: IRIS claims lint (prohibited research wording)
+        entry: python -m iris.tools.claims_lint
+        language: system
+        files: \.(md|txt|yaml|csv)$
+        exclude: ^(docs/reviews/|src/iris/tools/claims_lint.py|tests/)
+      - id: iris-verify-registry
+        name: IRIS source registry check
+        entry: python -m iris.tools.verify_registry --lenient
+        language: system
+        pass_filenames: false

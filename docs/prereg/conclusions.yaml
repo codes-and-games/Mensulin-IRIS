@@ -1,0 +1,19 @@
+# PRE-REGISTERED CONCLUSIONS (document 16A.9, F5). These are DRAFT CANDIDATES drafted from hypotheses H3-H5.
+# F5 refuses to classify any conclusion with frozen: false outside test mode (conclusions declared after results are
+# seen are post hoc). The research owner must review, date and freeze (set frozen: true, frozen_on: <date>) BEFORE
+# any fusion output is inspected; thresholds below are placeholders from the threshold grid, not decisions.
+conclusions:
+  - id: C1_heterogeneity_penalty
+    text: "Heterogeneity penalty HP(tau) exceeds 1 at the reference unit threshold (tails fatter than mean-only biology implies)"
+    metric: hp
+    threshold_units: 2.0
+    comparator: ">"
+    value: 1.0
+    frozen: false
+  - id: C2_excess_concentration
+    text: "Excess concentration (TCI - algebraic baseline) of unit-shortfall exceedances is > 0 (secondary; predicted zero under independence)"
+    metric: excess_tci
+    threshold_units: 2.0
+    comparator: ">"
+    value: 0.0
+    frozen: false

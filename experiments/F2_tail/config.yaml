@@ -1,0 +1,11 @@
+experiment: F2_tail
+seed: 20261004
+population: {n_tail: 100000, h: 1.0, eta: 0.5}
+thermal: {scenarios: [S2, S3, S4, S6, S7]}
+fusion: {duration_d: 28, transfer_sd: 0.0, J: 200}
+tail_thresholds_units: [2, 4, 8, 12]
+population_completion: {profile_completion: two_anchor_cosine, concordance_sd: sd_from_concordance_normal, gamma_amplitude: 0.03, xi_sd: 0.03, anovulatory_prevalence: 0.0}
+smoke:     # reduced sizes for plumbing checks (--smoke); never a scientific result
+  population: {n_tail: 20000}
+  thermal: {scenarios: [S3]}
+  fusion: {J: 12}

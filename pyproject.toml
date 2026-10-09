@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iris-research"
+version = "0.1.0"
+description = "IRIS: Dual-Variable Insulin Effectiveness Model (research simulation framework; not a medical device)"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26", "scipy>=1.11", "pandas>=2.1", "pyarrow>=14", "pydantic>=2.5",
+  "pyyaml>=6", "statsmodels>=0.14", "scikit-learn>=1.3", "matplotlib>=3.8", "SALib>=1.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "hypothesis>=6.90", "pre-commit"]
+climate = ["xarray", "netCDF4", "cdsapi"]
+bayes = ["pymc", "numpyro"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = ["slow: slower statistical tests"]

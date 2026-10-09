@@ -1,0 +1,14 @@
+experiment: S3_virtual_population
+seed: 20261004
+population: {n: 20000}
+eta_reference: 0.5            # STRESS-grid reference (configs/fusion/admissible_set.yaml)
+heterogeneity_levels: [0.5, 1.0, 2.0]
+# Analyst-declared completions for quantities the document leaves [TO EXTRACT]. STRESS_TEST status: Theta_S only, never evidence.
+population_completion:
+  profile_completion: two_anchor_cosine
+  concordance_sd: sd_from_concordance_normal
+  gamma_amplitude: 0.03
+  xi_sd: 0.03
+  anovulatory_prevalence: 0.0
+smoke:     # reduced sizes for plumbing checks (--smoke); never a scientific result
+  population: {n: 3000}

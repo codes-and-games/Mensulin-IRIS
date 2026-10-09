@@ -1,0 +1,17 @@
+experiment: E3_vial_lag
+seed: 20261004
+# VERIFICATION_ONLY: physical values used purely to verify numerics. They are NOT scientific inputs and are
+# never used to produce a reported lag time constant (those come from lag.yaml / registered handbook values).
+verification:
+  radius_m: 0.012
+  rho: 1000.0
+  cp: 4180.0
+  k: 0.6
+  h: 8.0
+  h_invalid: 400.0
+  dt_s: 30.0
+  n_steps: 240
+  t_air_c: 35.0
+  t_v0_c: 5.0
+  spike_c: 45.0
+  fv_tolerance_c: 0.5

@@ -1,0 +1,9 @@
+experiment: F3_compounding
+seed: 20261004
+population: {h: 1.0}
+thermal: {scenarios: [S3, S6]}
+fusion: {duration_d: 28, transfer_sd: 0.35}
+r_pb_levels: [0.0, 0.4, 0.8]
+quantile: 0.8       # 'large' = top 20% of each marginal (analyst-declared threshold; varied in R2)
+smoke:     # reduced sizes for plumbing checks (--smoke); never a scientific result
+  thermal: {scenarios: [S3]}

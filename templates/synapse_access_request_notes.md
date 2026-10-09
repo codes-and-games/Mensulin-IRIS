@@ -1,0 +1,2 @@
+# DiaTrend: intended-use statement (Synapse)
+I will use the DiaTrend data only for research on insulin sensitivity and total daily dose in type 1 diabetes (an unlabelled long-series negative control and an ISF-vs-TDD analysis). I will not attempt re-identification, will not redistribute the data, will store it only in an access-controlled location outside any public repository, and will cite the dataset descriptor (Scientific Data 2023;10:556) and the Synapse record.

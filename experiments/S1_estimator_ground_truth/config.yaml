@@ -1,0 +1,30 @@
+experiment: S1_estimator_ground_truth
+seed: 20261004
+days: 84
+dt_min: 10.0
+# SIMULATOR / ESTIMATOR constants: ASSUMPTION levels from the document's T4 definition (tauI 50-60 min, tauC ~40 min); TEST-grade values for ISF0/CSF0/Ag.
+tau_i_min: 55.0
+tau_c_min: 40.0
+ag: 0.9
+isf0: 50.0
+csf0: 3.0
+g_target: 120.0
+e_offset: 0.2
+process_sd_g: 0.5
+q_lns: 1.0e-6
+q_e: 1.0e-8
+q_g: 0.3
+alpha: 0.05
+amplitudes: [0.0, 0.03, 0.05, 0.10, 0.20]
+cycle_lengths: [24, 28, 32]
+cgm_sd: 10.0
+carb_err: 0.2
+gap: 0.10
+n_reps: 6
+misspec_factor: 1.5
+control_A: 0.10
+smoke:
+  amplitudes: [0.0, 0.10]
+  cycle_lengths: [28]
+  n_reps: 2
+  days: 56

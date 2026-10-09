@@ -1,0 +1,16 @@
+study_id,source_id,product,formulation,container,temp_c,time_days,potency,sd,assay,extracted_by,verified_by,page_table_ref
+TEST_ONLY:A,TEST_ONLY:A,SYNTH,U100,vial,5,10,1.0,0.01,SYNTHETIC,generated,generated,none
+TEST_ONLY:A,TEST_ONLY:A,SYNTH,U100,vial,5,30,0.998,0.01,SYNTHETIC,generated,generated,none
+TEST_ONLY:A,TEST_ONLY:A,SYNTH,U100,vial,25,10,0.99,0.01,SYNTHETIC,generated,generated,none
+TEST_ONLY:A,TEST_ONLY:A,SYNTH,U100,vial,25,30,0.97,0.01,SYNTHETIC,generated,generated,none
+TEST_ONLY:A,TEST_ONLY:A,SYNTH,U100,vial,37,10,0.96,0.01,SYNTHETIC,generated,generated,none
+TEST_ONLY:A,TEST_ONLY:A,SYNTH,U100,vial,37,30,0.89,0.01,SYNTHETIC,generated,generated,none
+TEST_ONLY:A,TEST_ONLY:A,SYNTH,U100,vial,45,10,0.90,0.01,SYNTHETIC,generated,generated,none
+TEST_ONLY:A,TEST_ONLY:A,SYNTH,U100,vial,45,30,0.73,0.01,SYNTHETIC,generated,generated,none
+TEST_ONLY:B,TEST_ONLY:B,SYNTH,U100,vial,5,10,1.0,0.01,SYNTHETIC,generated,generated,none
+TEST_ONLY:B,TEST_ONLY:B,SYNTH,U100,vial,25,10,0.985,0.01,SYNTHETIC,generated,generated,none
+TEST_ONLY:B,TEST_ONLY:B,SYNTH,U100,vial,25,30,0.95,0.01,SYNTHETIC,generated,generated,none
+TEST_ONLY:B,TEST_ONLY:B,SYNTH,U100,vial,37,10,0.94,0.01,SYNTHETIC,generated,generated,none
+TEST_ONLY:B,TEST_ONLY:B,SYNTH,U100,vial,37,30,0.84,0.01,SYNTHETIC,generated,generated,none
+TEST_ONLY:B,TEST_ONLY:B,SYNTH,U100,vial,45,10,0.87,0.01,SYNTHETIC,generated,generated,none
+TEST_ONLY:B,TEST_ONLY:B,SYNTH,U100,vial,45,30,0.66,0.01,SYNTHETIC,generated,generated,none

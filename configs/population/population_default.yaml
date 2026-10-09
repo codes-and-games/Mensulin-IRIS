@@ -1,0 +1,25 @@
+# Virtual-population defaults. Anchors are PUBLISHED (source S1) and PENDING_VERIFY until the biology
+# lead checks the primary source. Unresolved items are null and block only what depends on them.
+n: 20000
+n_tail: 100000
+tdd:   {family: lognormal, mean_u: 37.3, sd_u: 12.2, status: PENDING_VERIFY, source_id: S1}
+cycle: {family: truncated_normal, mean_d: 28.4, sd_d: 3.1, lo_d: 21, hi_d: 40, status: PENDING_VERIFY, source_id: S1}
+luteal_length: {mean_d: 14.0, sd_d: 1.7, status: PENDING_VERIFY, source_id: S1, note: "[VERIFY]"}
+anovulatory_prevalence: {value: null, status: UNRESOLVED, note: "[TO EXTRACT] biology lead review"}
+phases: [early_follicular, late_follicular, periovulatory, early_luteal, midluteal, late_luteal]
+phase_sensitivity_anchor:        # population-level relative sensitivity contrast (fraction of individual mean)
+  early_follicular: {value: 0.026, ci: [0.003, 0.050], status: PENDING_VERIFY, source_id: S1}
+  midluteal:        {value: -0.026, ci: [-0.052, -0.001], status: PENDING_VERIFY, source_id: S1}
+  late_follicular: {value: null, status: UNRESOLVED, note: "[TO EXTRACT] Hossmann 2026 supplement"}
+  periovulatory:   {value: null, status: UNRESOLVED, note: "[TO EXTRACT]"}
+  early_luteal:    {value: null, status: UNRESOLVED, note: "[TO EXTRACT]"}
+  late_luteal:     {value: null, status: UNRESOLVED, note: "[TO EXTRACT]"}
+concordance_with_population_direction: {value: 0.847, status: PENDING_VERIFY, role: "reference assumption only (document 16A.3)", source_id: S1}
+between_person_posterior_sd: {value: null, status: UNRESOLVED, note: "[TO EXTRACT] reported posterior between-person uncertainty"}
+glucose_load_phase_profile: {value: null, status: UNRESOLVED, note: "[TO EXTRACT] carbohydrate phase tables; peak midluteal"}
+residual_xi_sd: {value: null, status: UNRESOLVED, note: "calibrated to published TDD phase variance"}
+completion_options:   # analyst-defined completions: Theta_S ONLY
+  profile_completion: {name: two_anchor_cosine, status: STRESS_TEST, desc: "cosine in cycle position through the two published anchors"}
+  concordance_sd:     {name: sd_from_concordance_normal, status: STRESS_TEST, desc: "reference assumption: sigma = |mu|/Phi^-1(concordance)"}
+  gamma:              {name: cosine_amplitude, status: STRESS_TEST, amplitude_levels: [0.0, 0.03, 0.06], desc: "carb-load phase swing, peak midluteal"}
+  xi:                 {name: normal, status: STRESS_TEST, sd_levels: [0.02, 0.05]}

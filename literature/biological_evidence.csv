@@ -1,0 +1,17 @@
+parameter,value,ci_low,ci_high,unit,source_id,page_table_ref,population,extracted_by,verified_by,status
+tdd_mean_u,37.3,,,U/day,S1,[to locate],adults with T1D using AID; n=64 with dosing data,document_appendix,,PENDING_VERIFY
+tdd_sd_u,12.2,,,U/day,S1,[to locate],same,document_appendix,,PENDING_VERIFY
+cycle_length_mean_d,28.4,,,d,S1,[to locate],same,document_appendix,,PENDING_VERIFY
+cycle_length_sd_d,3.1,,,d,S1,[to locate],same,document_appendix,,PENDING_VERIFY
+sensitivity_contrast_early_follicular,0.026,0.003,0.05,fraction of individual mean,S1,[to locate],"population-level, modelled",document_appendix,,PENDING_VERIFY
+sensitivity_contrast_midluteal,-0.026,-0.052,-0.001,fraction of individual mean,S1,[to locate],"population-level, modelled",document_appendix,,PENDING_VERIFY
+share_consistent_with_population_trend,0.847,,,fraction,S1,[to locate],reported share of participants,document_appendix,,PENDING_VERIFY
+luteal_length_mean_d,14.0,,,d,S1,[to locate],[VERIFY] in document,document_appendix,,PENDING_VERIFY
+luteal_length_sd_d,1.7,,,d,S1,[to locate],[VERIFY] in document,document_appendix,,PENDING_VERIFY
+sensitivity_contrast_late_follicular,,,,fraction of individual mean,S1,,[TO EXTRACT],,,UNRESOLVED
+sensitivity_contrast_periovulatory,,,,fraction of individual mean,S1,,[TO EXTRACT],,,UNRESOLVED
+sensitivity_contrast_early_luteal,,,,fraction of individual mean,S1,,[TO EXTRACT],,,UNRESOLVED
+sensitivity_contrast_late_luteal,,,,fraction of individual mean,S1,,[TO EXTRACT],,,UNRESOLVED
+between_person_posterior_sd,,,,ln units,S1,,[TO EXTRACT],,,UNRESOLVED
+anovulatory_prevalence,,,,fraction,,,[TO EXTRACT],,,UNRESOLVED
+phase_day_windows,,,,days,S1,,[TO EXTRACT],,,UNRESOLVED

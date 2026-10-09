@@ -1,0 +1,12 @@
+experiment: S2_thermal_kinetics
+seed: 20261004
+n_replicates: 20
+truth:                       # SIMULATION truth (TEST_ONLY); not literature values
+  t_ref_c: 25.0
+  k_ref_per_day: 0.001
+  ea_j_mol: 90000.0
+  temps_c: [5.0, 25.0, 37.0, 45.0]
+  times_d: [7.0, 14.0, 28.0, 56.0]
+  sd: 0.01
+  pred_temp_c: 30.0
+  pred_time_d: 28.0

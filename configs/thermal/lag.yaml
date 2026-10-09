@@ -1,0 +1,10 @@
+# Vial time-constant ranges per context (minutes), drawn log-uniformly per Monte Carlo run.
+# Must be COMPUTED from registered handbook values (S35). The document states an order of magnitude only.
+contexts:
+  C1_still_indoor_air:
+    tau_min_range: [10.0, 20.0]
+    status: ASSUMPTION      # document 12.8: "of the order of ten to twenty minutes" (order-of-magnitude, not a registered computation)
+    note: replace with a computed range from registered m, cp, U, A before production
+  C1_moving_air: {tau_min_range: null, status: UNRESOLVED}
+  C3_pouch: {tau_min_range: null, status: UNRESOLVED}
+dt_min_default: 1.0

@@ -1,0 +1,24 @@
+# Admissible parameter set  theta = (f, h, eta, ISF_model, s, m, st, r_PB, R_B, d, q)   (document 16A.8)
+# Each component: reference level, evidence_levels (supported by PUBLISHED/PUBLIC_DATASET evidence or
+# mathematically necessary) and stress_levels (analyst-defined probes; NEVER evidence).
+# Theta_E = product over evidence_levels, with components lacking evidence held at their reference level and
+# listed in `conditioned_on`.  Theta_S = product over (evidence U stress U reference) levels.
+# NOTE on eta / ISF grids / heterogeneity multipliers / R_B levels: analyst-defined (STRESS) pending extraction.
+components:
+  f:       {desc: distribution family, reference: normal, evidence_levels: [], stress_levels: [student_t_3, student_t_5, student_t_10, skewnormal_-3, skewnormal_-1, skewnormal_1, skewnormal_3, mixture_0.02, mixture_0.05, mixture_0.10, mixture_0.20], mixture_shift_sd: 3.0, mixture_shift_status: STRESS_TEST}
+  h:       {desc: heterogeneity scale multiplier, reference: 1.0, evidence_levels: [], stress_levels: [0.5, 2.0]}
+  eta:     {desc: requirement-sensitivity coupling, reference: 0.5, evidence_levels: [], stress_levels: [0.0, 1.0]}
+  isf:     {desc: glucose-equivalent model, reference: K_1700, evidence_levels: [], stress_levels: [K_1500, K_1800, K_over_R_phase]}
+  s:       {desc: storage scenario, reference: S3, evidence_levels: [S0, S1, S2, S3, S4, S6, S7], stress_levels: []}
+  m:       {desc: kinetic model set, reference: ensemble, evidence_levels: [], stress_levels: [pessimistic_envelope, optimistic_envelope, K0, K1_only]}
+  st:      {desc: transfer discrepancy SD (ln k), reference: 0.0, evidence_levels: [], stress_levels: [0.35, 0.7, 1.4]}
+  r_PB:    {desc: exposure-biology dependence, reference: 0.0, evidence_levels: [], stress_levels: [-0.8, -0.4, 0.4, 0.8]}
+  R_B:     {desc: within-biology dependence structure, reference: independent, evidence_levels: [], stress_levels: [tdd_sigma_pos, tdd_sigma_neg, s_gamma_pos, s_gamma_neg], strength: 0.5, strength_status: STRESS_TEST}
+  d:       {desc: dosing case, reference: A, evidence_levels: [A, B], stress_levels: []}
+  q:       {desc: analysis-set selector, reference: E, evidence_levels: [E], stress_levels: [S]}
+adversarial_search:
+  method: differential_evolution
+  budget_evaluations: 400
+  popsize: 8
+  seed_name: adversary
+latin_hypercube: {n_points: 2000, note: "coverage recorded separately for Theta_E and Theta_S"}

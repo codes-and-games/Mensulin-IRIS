@@ -1,0 +1,16 @@
+{
+  "id": "YOUR-KAGGLE-USERNAME/iris-phase1-runs",
+  "title": "IRIS Phase 1 runs",
+  "code_file": "iris_kaggle_phase1.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "YOUR-KAGGLE-USERNAME/iris-hupa-ucm",
+    "YOUR-KAGGLE-USERNAME/iris-brist1d-open"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}

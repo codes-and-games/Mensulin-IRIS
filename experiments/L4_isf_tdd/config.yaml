@@ -1,0 +1,4 @@
+experiment: L4_isf_tdd
+seed: 20261004
+synthetic: {n_persons: 40}
+smoke: {synthetic: {n_persons: 20}}

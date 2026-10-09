@@ -1,0 +1,8 @@
+# Scripted-fetch definitions. Addresses/versions are recorded only when verified; null => fetch refused.
+sources:
+  S27: {name: ERA5-Land, url: null, status: UNRESOLVED, note: "needs CDS API credentials + registered version"}
+  S28: {name: ERA5, url: null, status: UNRESOLVED}
+  S29: {name: NASA POWER, url: null, status: UNRESOLVED}
+  S30: {name: IMD gridded, url: null, status: UNRESOLVED}
+  S31: {name: ASHRAE Global Thermal Comfort Database II, url: null, status: UNRESOLVED}
+agreement_thresholds: {status: UNRESOLVED, note: "fixed in pre-registration BEFORE records are examined (ASSUMPTION)"}
