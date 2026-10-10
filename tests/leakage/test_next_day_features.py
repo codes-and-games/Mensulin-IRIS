@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 from iris.evaluate.cluster_bootstrap import cluster_bootstrap_skill
-from iris.features.next_day import CANDIDATE_FEATURES, build_next_day_table
+from iris.features.next_day import CANDIDATE_FEATURES, build_next_day_table, filter_min_rows_per_person
 from iris.tools.synthetic import synthetic_person_day
 
 NUM = ["tdd_u", "basal_u", "bolus_u", "carb_g", "carb_entries", "cgm_coverage", "mean_glucose_mgdl", "tir_pct", "tbr_pct", "tar_pct"]
@@ -80,3 +80,17 @@ def test_m7_smoke_run_in_test_mode(tmp_path):
     assert set(t["scheme"]) == {"GroupKFold", "LeaveOneGroupOut"} and t["primary"].any()
     pc = pd.read_parquet(ctx.dir / "tables" / "placebo_control.parquet")
     assert len(pc) == 2
+
+
+def test_min_rows_filter_accounts_for_every_excluded_row_and_person():
+    df = pd.DataFrame({"person_id": ["a"] * 2 + ["b"] * 3 + ["c"] * 10})
+    kept, counts = filter_min_rows_per_person(df, min_rows=10)
+    assert counts == {
+        "eligible_rows_before_min_rows_filter": 15,
+        "eligible_people_before_min_rows_filter": 3,
+        "rows_removed_min_rows_per_person": 5,
+        "people_removed_min_rows_per_person": 2,
+        "m7_rows_after_min_rows_per_person": 10,
+        "m7_people_after_min_rows_per_person": 1,
+    }
+    assert set(kept["person_id"]) == {"c"}

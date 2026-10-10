@@ -89,3 +89,26 @@ def build_next_day_table(df: pd.DataFrame, window: int = WINDOW_DEFAULT, min_his
     counts["target_days_valid"] = int(full["y_tdd_u"].notna().sum())
     counts["eligible_next_day_rows"] = int(elig.sum())
     return full.loc[elig].reset_index(drop=True), counts
+
+
+def filter_min_rows_per_person(tab: pd.DataFrame, min_rows: int) -> tuple[pd.DataFrame, dict[str, int]]:
+    """Apply M7's minimum-rows-per-person rule and report every row/person removed."""
+    if min_rows < 1:
+        raise ValueError("min_rows must be >= 1")
+    per = tab.groupby("person_id").size()
+    small = per[per < min_rows].index
+    n_rows_before = int(len(tab))
+    n_people_before = int(tab["person_id"].nunique())
+    n_rows_removed = int(per.loc[small].sum()) if len(small) else 0
+    kept = tab[~tab["person_id"].isin(small)].reset_index(drop=True)
+    counts = {
+        "eligible_rows_before_min_rows_filter": n_rows_before,
+        "eligible_people_before_min_rows_filter": n_people_before,
+        "rows_removed_min_rows_per_person": n_rows_removed,
+        "people_removed_min_rows_per_person": int(len(small)),
+        "m7_rows_after_min_rows_per_person": int(len(kept)),
+        "m7_people_after_min_rows_per_person": int(kept["person_id"].nunique()),
+    }
+    if n_rows_before - n_rows_removed != len(kept):
+        raise AssertionError("M7 cohort filter row accounting failed")
+    return kept, counts

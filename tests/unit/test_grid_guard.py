@@ -23,7 +23,17 @@ def test_load_events_rejects_grid_mismatch(tmp_path, monkeypatch):
 
     class Ctx:
         mode = RunMode.PRODUCTION
-        cfg = {"grid_minutes": 5, "_repo_root": str(tmp_path)}
+        cfg = {
+            "grid_minutes": 5,
+            "_repo_root": str(tmp_path),
+            "paths": {
+                "manifest": "data/manifest.csv",
+                "registry": "data/sources_registry.csv",
+            },
+        }
+
+        def add_input(self, path):
+            pass
     monkeypatch.setattr(xl, "repo", lambda ctx: tmp_path)
     with pytest.raises(ScientificBlocker, match="15 min"):
         xl.load_events(Ctx(), "dsx")

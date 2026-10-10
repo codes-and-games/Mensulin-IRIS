@@ -33,7 +33,7 @@ TDD under automated insulin delivery reflects controller behaviour as well as ph
 
 C_CFG = '''import os, pathlib, sys, subprocess, shutil, json, platform, hashlib, csv
 REPO_URL    = os.environ.get("IRIS_REPO_URL", "https://github.com/codes-and-games/Mensulin-IRIS.git")
-BASE_COMMIT = "40c266b"                       # the last pushed commit this notebook was prepared against
+BASE_COMMIT = "d625ea9ada8b439cccddbc9a1b17bd62932c382e"  # pinned repository revision for reproducibility
 INPUT_ROOT  = pathlib.Path(os.environ.get("IRIS_INPUT_ROOT", "/kaggle/input"))
 WORK_ROOT   = pathlib.Path(os.environ.get("IRIS_WORK_ROOT", "/kaggle/working"))
 VERIFY_HASHES = os.environ.get("IRIS_VERIFY_HASHES", "1") == "1"

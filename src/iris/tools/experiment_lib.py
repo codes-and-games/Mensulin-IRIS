@@ -30,6 +30,19 @@ def repo(ctx: RunContext) -> Path:
     return Path(ctx.cfg["_repo_root"])
 
 
+def register_table_inputs(ctx: RunContext, path: Path) -> None:
+    """Record processed-table, sidecar, manifest, and registry hashes in run metadata."""
+    ctx.add_input(path)
+    sidecar = sidecar_path(path)
+    if sidecar.is_file():
+        ctx.add_input(sidecar)
+    root = repo(ctx)
+    for rel in (ctx.cfg["paths"]["manifest"], ctx.cfg["paths"]["registry"]):
+        candidate = root / rel
+        if candidate.is_file():
+            ctx.add_input(candidate)
+
+
 def cfg_yaml(ctx: RunContext, rel: str) -> dict:
     return load_yaml(repo(ctx) / rel)
 
@@ -52,8 +65,9 @@ def source_prov(ctx: RunContext, source_id: str, transformation: str = "") -> Pr
 
 def derived_prov(ctx: RunContext, parents: list[Provenance], cls: EvidenceClass, source_id: str, transformation: str, generated_by: str) -> Provenance:
     base = parents[0]
+    extra_lineage = tuple(sid for parent in parents[1:] for sid in (*parent.parent_source_ids, parent.source_id))
     p = base.derive(evidence_class=cls, source_id=source_id, transformation=transformation, generated_by=generated_by,
-                    run_id=ctx.run_id, extra_parents=tuple(x.source_id for x in parents[1:]))
+                    run_id=ctx.run_id, extra_parents=extra_lineage)
     return p
 
 
@@ -216,6 +230,7 @@ def load_person_day(ctx: RunContext, with_cycle_labels: bool = True):
     if not p.exists():
         raise ScientificBlocker("person_day", "no processed person-day table", "obtain a registered public dataset, audit it (make audit), write configs/mappings/<dataset>.yaml, then ingest")
     df, prov = read_table(p)
+    register_table_inputs(ctx, p)
     PERSON_DAY.validate(df[[c.name for c in PERSON_DAY.columns]])
     made = read_sidecar_meta(p).get("run_mode", "unknown")
     order = {"test": 0, "provisional": 1, "production": 2}
@@ -240,6 +255,7 @@ def load_events(ctx: RunContext, dataset: str):
     if not p.exists():
         raise ScientificBlocker(f"events_grid:{dataset}", f"{p} not found", f"download {dataset}, audit, write the mapping, then `python -m iris.tools.ingest_dataset {dataset}`")
     df, prov = read_table(p)
+    register_table_inputs(ctx, p)
     made = read_sidecar_meta(p).get("run_mode", "unknown")
     order = {"test": 0, "provisional": 1, "production": 2}
     if order.get(made, -1) < order[ctx.mode.value]:

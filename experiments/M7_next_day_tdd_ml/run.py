@@ -18,7 +18,7 @@ from iris.estimator.ml_benchmarks import gradient_boosting, random_forest
 from iris.evaluate.cluster_bootstrap import cluster_bootstrap_skill
 from iris.evaluate.cv import grouped_cv_predict, grouped_splits
 from iris.features import leakage_guard as lg
-from iris.features.next_day import CANDIDATE_FEATURES, FEATURE_AVAILABILITY, build_next_day_table
+from iris.features.next_day import CANDIDATE_FEATURES, FEATURE_AVAILABILITY, build_next_day_table, filter_min_rows_per_person
 from iris.tools import experiment_lib as xl
 
 SIMPLE = ("M0_naive_mean", "P1_persistence", "P7_trailing_mean")
@@ -47,19 +47,22 @@ def run(ctx):
     cfg = ctx.cfg
     raw, prov = xl.load_person_day(ctx, with_cycle_labels=False)
     tab, counts = build_next_day_table(raw, int(cfg["features"]["window_days"]), int(cfg["features"]["min_history_days"]))
-    base = lambda sid, what: xl.derived_prov(ctx, prov[:1], EvidenceClass.COMPUTED, sid, what, "iris.features.next_day / experiments.M7")
+    # Preserve every contributing dataset when the input person-day table is combined.
+    base = lambda sid, what: xl.derived_prov(ctx, prov, EvidenceClass.COMPUTED, sid, what, "iris.features.next_day / experiments.M7")
     for k, v in counts.items():
         if k.startswith(("excluded", "included")) and v:
             ctx.log.exclude(f"{v} person-days: {k}")
 
     # ---- cohort flow (per dataset) --------------------------------------------------------------------------------------------
     n_min = int(cfg["min_rows_per_person"])
-    per = tab.groupby("person_id").size()
-    small = per[per < n_min].index
-    if len(small):
-        ctx.log.exclude(f"{len(small)} persons with < {n_min} eligible next-day rows removed from M7")
-    tab = tab[~tab["person_id"].isin(small)].reset_index(drop=True)
+    tab, cohort_filter_counts = filter_min_rows_per_person(tab, n_min)
+    if cohort_filter_counts["people_removed_min_rows_per_person"]:
+        ctx.log.exclude(
+            f"{cohort_filter_counts['people_removed_min_rows_per_person']} persons with < {n_min} eligible next-day rows removed "
+            f"from M7 ({cohort_filter_counts['rows_removed_min_rows_per_person']} eligible rows)"
+        )
     flow = [dict(dataset="ALL", stage=k, n=v) for k, v in counts.items()]
+    flow += [dict(dataset="ALL", stage=k, n=v) for k, v in cohort_filter_counts.items()]
     for ds, t in tab.groupby("dataset"):
         flow += [dict(dataset=ds, stage="m7_people", n=int(t["person_id"].nunique())), dict(dataset=ds, stage="m7_rows", n=int(len(t)))]
     ctx.save_table(pd.DataFrame(flow), "cohort_flow", [base("m7_cohort_flow", "inclusion counts for the next-day table")])
