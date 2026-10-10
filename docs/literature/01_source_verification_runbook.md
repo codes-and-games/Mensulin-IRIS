@@ -23,11 +23,23 @@ python -m iris.tools.source_verification apply-params docs/literature/parameter_
 python -m iris.tools.sync_population_status --dry-run      # shows what would change
 python -m iris.tools.sync_population_status
 ```
-`apply-params` records the sign-off in `literature/biological_evidence.csv`. The production gate, however, reads each parameter's `status` in `configs/population/population_default.yaml`; `sync_population_status` sets `status: RESOLVED` there **only** for rows that are RESOLVED in the CSV **and** whose value equals the config value (it reports a mismatch and changes nothing). It never writes a value you did not verify.
+`apply-params` records the sign-off in `literature/biological_evidence.csv`. The production gate, however, reads each parameter's `status` in `configs/population/population_default.yaml`; ordinary `sync_population_status` sets `status: RESOLVED` there only for rows that are RESOLVED in the CSV and whose value equals the config value. It reports a mismatch and changes nothing by default.
+
+If a fully verified source correction intentionally changes an existing config value, add a numbered decision note with an explicit machine-checkable section listing the exact parameter names and verified numeric values, for example:
+```markdown
+## Approved sync values
+- luteal_length_mean_d: 12.5
+- luteal_length_sd_d: 1.2
+```
+Preview the explicit update (do not edit YAML by hand):
+```powershell
+python -m iris.tools.sync_population_status --dry-run --approve-mismatch luteal_length --decision-note docs/decisions/0005-s1-luteal-length-source-mismatch.md
+```
+The command verifies that the evidence rows are already `RESOLVED` and that the decision note lists the exact values recorded in those rows. Only after the dry run shows the intended update should you repeat the command without `--dry-run`. Do not use this override for undocumented or unverified differences.
 **Start with S1** (`docs/literature/S1_hossmann_evidence.md`): `tdd_mean_u` and `tdd_sd_u` unblock S3, F2 and everything downstream.
 
 ## When the paper disagrees with IRIS
-`matches = no` produces `MISMATCH_REPORTED` and **changes nothing**. Then: (1) decide with the paper in hand which quantity IRIS needs (population-level posterior vs a subgroup mean, etc.) and write the reasoning in `docs/decisions/` as a numbered note; (2) in `literature/biological_evidence.csv` clear that row's `value`, `ci_low`, `ci_high`, `page_table_ref`, `extracted_by`, `verified_by` and set `status` to `UNRESOLVED`; (3) re-extract via the worksheet (`value_in_paper`, `page_table_ref`, your name in `verified_by`); (4) second-reader verify. Also update `configs/population/population_default.yaml` only through this chain, never first.
+`matches = no` produces `MISMATCH_REPORTED` and **changes nothing**. Then: (1) decide with the paper in hand which quantity IRIS needs (population-level posterior vs a subgroup mean, etc.) and write the reasoning in `docs/decisions/` as a numbered note; (2) in `literature/biological_evidence.csv` clear that row's `value`, `ci_low`, `ci_high`, `page_table_ref`, `extracted_by`, `verified_by` and set `status` to `UNRESOLVED`; (3) re-extract via the worksheet (`value_in_paper`, `page_table_ref`, your name in `verified_by`); (4) second-reader verify. Also update `configs/population/population_default.yaml` only through this chain, never first. This procedure applies when the worksheet extraction disagrees with its cited paper. If the evidence has already been corrected and second-reader verified but the YAML retains the old value, use the approved synchronization path above; do not erase verified evidence merely to make the configuration match.
 
 ## C. Literature tables (inputs of L1, L2, L5)
 Each needs primary-source extraction with a page/table reference and a second reader. **Never copy numbers from abstracts of secondary summaries.**

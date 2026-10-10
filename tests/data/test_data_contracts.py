@@ -79,4 +79,5 @@ def test_literature_tables_have_documented_schemas():
         assert open(REPO / "literature" / name).readline().strip() == cols
     bio = pd.read_csv(REPO / "literature/biological_evidence.csv")
     assert (bio.loc[bio.status == "UNRESOLVED", "value"].isna()).all()      # unresolved parameters never carry values
-    assert bio["verified_by"].isna().all()                                    # nothing has been second-read yet
+    assert bio.loc[bio.status == "PENDING_VERIFY", "verified_by"].isna().all()  # pending rows have no second reader
+    assert bio.loc[bio.status == "RESOLVED", "verified_by"].notna().all()        # resolved rows record a second reader

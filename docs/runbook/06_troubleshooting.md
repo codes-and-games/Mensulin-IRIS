@@ -12,7 +12,7 @@
 | `mapped columns missing [...]` | Mapping does not match this dataset version | Re-audit this exact download, correct the mapping |
 | `ingested in 'provisional' mode; cannot feed a 'production' run` | Ingest mode too weak | Re-run `ingest_dataset ... --mode production` |
 | `apply-params`: `verifier equals extractor` | Second reader required | Different person verifies, or `--allow-single-reader` and document the limitation in the verification log |
-| `apply-params`: `value does not match the paper -> NOT applied` | The tool logs `MISMATCH_REPORTED` and changes nothing | Follow `docs/literature/01_source_verification_runbook.md` section "When the paper disagrees with IRIS" (set the row back to UNRESOLVED, re-extract, second reader) |
+| `apply-params`: `value does not match the paper -> NOT applied` | The tool logs `MISMATCH_REPORTED` and changes nothing | Follow `docs/literature/01_source_verification_runbook.md` section "When the paper disagrees with IRIS"; after second-reader verification and a numbered decision note, use the documented `sync_population_status --approve-mismatch ... --decision-note ...` path only for the explicitly approved parameter group |
 | `claims_lint` failure | A document makes an unsupported claim | Reword; see `python -m iris.tools.claims_lint --help` |
 | DiaTrend Excel files unreadable | `.xlsx` needs `openpyxl` | `python -m pip install openpyxl` |
 | Windows: `make` not found | Not installed | Use the `python -m` equivalents in the docs |

@@ -4,7 +4,7 @@ n: 20000
 n_tail: 100000
 tdd:   {family: lognormal, mean_u: 37.3, sd_u: 12.2, status: PENDING_VERIFY, source_id: S1}
 cycle: {family: truncated_normal, mean_d: 28.4, sd_d: 3.1, lo_d: 21, hi_d: 40, status: PENDING_VERIFY, source_id: S1}
-luteal_length: {mean_d: 14.0, sd_d: 1.7, status: PENDING_VERIFY, source_id: S1, note: "[VERIFY]"}
+luteal_length: {mean_d: 12.5, sd_d: 1.2, status: RESOLVED, source_id: S1}
 anovulatory_prevalence: {value: null, status: UNRESOLVED, note: "[TO EXTRACT] biology lead review"}
 phases: [early_follicular, late_follicular, periovulatory, early_luteal, midluteal, late_luteal]
 phase_sensitivity_anchor:        # population-level relative sensitivity contrast (fraction of individual mean)

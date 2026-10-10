@@ -6,8 +6,8 @@ cycle_length_sd_d,S1,3.1,d,PENDING_VERIFY,document_appendix,Same sentence: SD 3.
 sensitivity_contrast_early_follicular,S1,0.026,fraction of individual mean,PENDING_VERIFY,document_appendix,"AMBIGUOUS: paper text for the 84.7% group gives +2.7% (CrI 0.4, 5.0); secondary reports give +2.6% for the population-level effect. IRIS stores 0.026 [0.003, 0.050]. Reviewer must read which quantity each number is.",,,,,,,
 sensitivity_contrast_midluteal,S1,-0.026,fraction of individual mean,PENDING_VERIFY,document_appendix,"Paper text: -2.7% for the 84.7% group (CrI not captured); secondary reports: -2.6% population-level. IRIS stores -0.026 [-0.052, -0.001]. Reviewer must reconcile.",,,,,,,
 share_consistent_with_population_trend,S1,0.847,fraction,PENDING_VERIFY,document_appendix,Paper text: 84.7% of participants showed a consistent trajectory (above-average sensitivity early follicular and periovulatory; below-average midluteal).,,,,,,,
-luteal_length_mean_d,S1,14.0,d,PENDING_VERIFY,document_appendix,Not found in captured text. Search main text and Supplementary Table 3.,,,,,,,
-luteal_length_sd_d,S1,1.7,d,PENDING_VERIFY,document_appendix,Not found in captured text.,,,,,,,
+luteal_length_mean_d,S1,12.5,d,PENDING_VERIFY,Divyesh Idhate,,12.5,Supplementary Appendix Table 3 p. 6,yes,,,Gurman Dhillon,09/10/26
+luteal_length_sd_d,S1,1.2,d,PENDING_VERIFY,Divyesh Idhate,,1.2,Supplementary Appendix Table 3 p. 6,yes,,,Gurman Dhillon,09/10/26
 sensitivity_contrast_late_follicular,S1,,fraction of individual mean,UNRESOLVED,,Secondary report: sensitivity 'remained above average through the late follicular phase'. Numeric value not captured: extract from the paper's figure/supplement.,,,,,,,
 sensitivity_contrast_periovulatory,S1,,fraction of individual mean,UNRESOLVED,,"Paper text: +1.9% (CrI 0.3, 3.4) appears in the sentence on the 84.7% group; confirm it is the population-level estimate.",,,,,,,
 sensitivity_contrast_early_luteal,S1,,fraction of individual mean,UNRESOLVED,,,,,,,,,

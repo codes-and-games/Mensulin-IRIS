@@ -6,8 +6,8 @@ cycle_length_sd_d,3.1,,,d,S1,[to locate],same,document_appendix,,PENDING_VERIFY
 sensitivity_contrast_early_follicular,0.026,0.003,0.05,fraction of individual mean,S1,[to locate],"population-level, modelled",document_appendix,,PENDING_VERIFY
 sensitivity_contrast_midluteal,-0.026,-0.052,-0.001,fraction of individual mean,S1,[to locate],"population-level, modelled",document_appendix,,PENDING_VERIFY
 share_consistent_with_population_trend,0.847,,,fraction,S1,[to locate],reported share of participants,document_appendix,,PENDING_VERIFY
-luteal_length_mean_d,14.0,,,d,S1,[to locate],[VERIFY] in document,document_appendix,,PENDING_VERIFY
-luteal_length_sd_d,1.7,,,d,S1,[to locate],[VERIFY] in document,document_appendix,,PENDING_VERIFY
+luteal_length_mean_d,12.5,,,d,S1,Supplementary Appendix Table 3 p. 6,[VERIFY] in document,Divyesh Idhate,Gurman Dhillon,RESOLVED
+luteal_length_sd_d,1.2,,,d,S1,Supplementary Appendix Table 3 p. 6,[VERIFY] in document,Divyesh Idhate,Gurman Dhillon,RESOLVED
 sensitivity_contrast_late_follicular,,,,fraction of individual mean,S1,,[TO EXTRACT],,,UNRESOLVED
 sensitivity_contrast_periovulatory,,,,fraction of individual mean,S1,,[TO EXTRACT],,,UNRESOLVED
 sensitivity_contrast_early_luteal,,,,fraction of individual mean,S1,,[TO EXTRACT],,,UNRESOLVED

@@ -1,0 +1,13 @@
+applied_on,kind,id,action,verified_by,claim_location,note
+2026-10-09,parameter,luteal_length_mean_d,MISMATCH_REPORTED,,"Supplementary Appendix, Table 3, p. 6",12.5
+2026-10-09,parameter,luteal_length_sd_d,MISMATCH_REPORTED,,"Supplementary Appendix, Table 3, p. 6",1.2
+2026-10-10,parameter,luteal_length_mean_d,EXTRACTED->PENDING_VERIFY,Divyesh Idhate,"Supplementary Appendix, Table 3, p. 6",
+2026-10-10,parameter,luteal_length_sd_d,EXTRACTED->PENDING_VERIFY,Divyesh Idhate,"Supplementary Appendix, Table 3, p. 6",
+2026-10-10,parameter,luteal_length_mean_d,MISMATCH_REPORTED,Divyesh Idhate,"Supplementary Appendix, Table 3, p. 6",12.5
+2026-10-10,parameter,luteal_length_sd_d,MISMATCH_REPORTED,Divyesh Idhate,"Supplementary Appendix, Table 3, p. 6",1.2
+2026-10-10,parameter,luteal_length_mean_d,MISMATCH_REPORTED,Divyesh Idhate,"Supplementary Appendix, Table 3, p. 6",12.5
+2026-10-10,parameter,luteal_length_sd_d,MISMATCH_REPORTED,Divyesh Idhate,"Supplementary Appendix, Table 3, p. 6",1.2
+2026-10-10,parameter,luteal_length_mean_d,MISMATCH_REPORTED,Divyesh Idhate,"Supplementary Appendix, Table 3, p. 6",12.5
+2026-10-10,parameter,luteal_length_sd_d,MISMATCH_REPORTED,Divyesh Idhate,"Supplementary Appendix, Table 3, p. 6",1.2
+2026-10-10,parameter,luteal_length_mean_d,RESOLVED,Gurman Dhillon,Supplementary Appendix Table 3 p. 6,
+2026-10-10,parameter,luteal_length_sd_d,RESOLVED,Gurman Dhillon,Supplementary Appendix Table 3 p. 6,
