@@ -1,0 +1,24 @@
+experiment: M7_next_day_tdd_ml
+seed: 20261010
+features:
+  window_days: 7
+  min_history_days: 3
+  max_feature_missing: 0.5      # data-quality rule fixed before any run: a feature missing in >50% of eligible rows of any dataset is dropped (and logged)
+min_rows_per_person: 10
+cv:
+  n_splits: 5
+  primary: LeaveOneGroupOut     # every person is unseen in turn; the verdict uses this scheme only
+models:
+  n_estimators: 200
+  ridge_alpha: 10.0
+bootstrap:
+  B: 2000
+min_skill: 0.02               # ASSUMPTION fixed before any real run: at least 2% lower pooled MAE than the better simple baseline
+verdict_rule: "ml_beats_best_simple_baseline iff the 95% person-clustered bootstrap CI of MAE skill vs the better of P1/P7 lies entirely above 0 AND the point skill >= min_skill (primary scheme)"
+smoke:
+  models:
+    n_estimators: 20
+  bootstrap:
+    B: 200
+synthetic:
+  n_persons: 24

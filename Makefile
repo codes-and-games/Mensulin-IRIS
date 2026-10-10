@@ -54,6 +54,7 @@ estimator:
 	-$(RUN) M4_leakage --mode $(MODE)
 	-$(RUN) M5_empirical_isf_tdd --mode $(MODE)
 	-$(RUN) M6_circadian_recovery --mode $(MODE)
+	-$(RUN) M7_next_day_tdd_ml --mode $(MODE)
 
 figures:
 	$(PY) -m iris.tools.make_report
