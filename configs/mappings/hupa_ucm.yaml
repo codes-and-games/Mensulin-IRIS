@@ -4,6 +4,7 @@ basal_ffill_minutes: 0
 columns:
   basal: basal_rate
   bolus: bolus_volume_delivered
+  carb: carb_input
   glucose: glucose
   timestamp: time
 dataset: hupa_ucm
@@ -23,4 +24,5 @@ tz: Europe/Madrid
 units:
   basal: u_per_step
   bolus: u
+  carb: g
   glucose: mg/dL

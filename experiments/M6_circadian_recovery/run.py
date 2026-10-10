@@ -36,7 +36,15 @@ def _select(ev: pd.DataFrame, c: dict):
         day = d.groupby("date_local")
         cov = (day["glucose_mgdl"].count() / spd).to_numpy()
         icov = (day["insulin_u"].count() / spd).to_numpy()
-        ok = (cov >= c["min_cgm_coverage"]) & (icov >= c["min_insulin_coverage"])
+        # A day with zero total recorded insulin cannot yield a valid ISF scale.
+        # Treat it as unanalysable; never hide division by zero with an epsilon.
+        daily_insulin = day["insulin_u"].sum(min_count=1).to_numpy()
+        ok = (
+            (cov >= c["min_cgm_coverage"])
+            & (icov >= c["min_insulin_coverage"])
+            & (daily_insulin > 0)
+            & __import__("numpy").isfinite(daily_insulin)
+        )
         s, n = _longest_run(ok)
         if n < c["min_days"]:
             yield pid, None, None, None, None

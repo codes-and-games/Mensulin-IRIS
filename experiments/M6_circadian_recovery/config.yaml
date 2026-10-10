@@ -2,6 +2,7 @@ ag: 0.9
 alpha: 0.05
 cgm_sd: 10.0
 datasets:
+- hupa_ucm
 - brist1d
 experiment: M6_circadian_recovery
 g_target: 120.0

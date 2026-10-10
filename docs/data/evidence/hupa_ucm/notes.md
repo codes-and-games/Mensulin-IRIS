@@ -1,25 +1,18 @@
 # HUPA-UCM mapping audit
 
-Source: Hidalgo et al., *HUPA-UCM diabetes dataset*, Data in Brief 55 (2024), 110559.
-Paper: https://doi.org/10.1016/j.dib.2024.110559
-Dataset: https://doi.org/10.17632/3hbcscwz44.1
+Dataset source: https://data.mendeley.com/datasets/3hbcscwz44/1
+DOI: 10.17632/3hbcscwz44.1
+Official dataset record: Version 1, published 25 April 2024; dataset page lists CC BY 4.0.
 
-- `time`: source timestamp column; native preprocessed grid inspected at 5 minutes.
-- `glucose`: mg/dL, as specified in the dataset paper.
-- `basal_rate`: insulin amount per 5-minute interval, not a rate per hour; mapped as `u_per_step`.
-- `bolus_volume_delivered`: bolus insulin delivered per interval; mapped as `u`.
-- `carb_input`: servings; the paper defines 1 serving as 10 g. The ingest pipeline converts servings to grams.
-- Participant ID: each preprocessed CSV is one participant; use its filename stem.
-- Timezone caveat: the source describes timestamps without an explicit timezone. `Europe/Madrid` is an operational assumption based on the Spanish study site, not a timezone explicitly stated in the paper. Circadian results must be treated as provisional until timestamp semantics are verified.
-- Scope: this dataset has no menstrual-cycle labels and cannot support a cycle-linked claim.
+- `time`: source timestamp column; the inspected preprocessed grid is 5 minutes.
+- `glucose`: mg/dL.
+- `basal_rate`: currently mapped as insulin amount per 5-minute step; confirm this interpretation against the paper before production.
+- `bolus_volume_delivered`: insulin amount per record.
+- `carb_input`: carbohydrate intake in grams, according to the official Mendeley dataset description. No serving conversion is applied.
+- Participant ID: preprocessed CSV filename stem.
+- Timezone: `Europe/Madrid` is an operational assumption, not explicitly verified from the source timestamp specification.
+- No menstrual-cycle labels are supplied.
 
-The source licence and version must still be confirmed in the source-verification worksheet before production ingestion.
+Correction note: an earlier draft treated `carb_input` as 10-gram servings. The official dataset description states grams; this mapping now uses grams directly. Raw files remain unchanged.
 
-## Unresolved carbohydrate-unit discrepancy
-
-Carbohydrate mapping is intentionally disabled for initial ingestion.
-The paper describes `carb_input` in 10 g servings, but preprocessed files
-contain participant records with values such as 90?130. These may reflect
-inconsistent units or preprocessing; this has not been established.
-No raw values were changed and no threshold-based conversion was applied.
-Carbohydrate analyses remain blocked pending source-level clarification.
+Use remains provisional until source metadata, timestamp semantics, and insulin field definitions are verified.
