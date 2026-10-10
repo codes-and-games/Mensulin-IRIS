@@ -1,4 +1,7 @@
 experiment: M4_leakage
-seed: 20261004
-synthetic: {n_persons: 24}
-smoke: {synthetic: {n_persons: 12}}
+seed: 20261010
+smoke:
+  synthetic:
+    n_persons: 12
+synthetic:
+  n_persons: 24

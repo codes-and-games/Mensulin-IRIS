@@ -1,0 +1,26 @@
+audit_file: data/dictionaries/audit_hupa_ucm_preprocessed.json
+audit_status: AUDITED
+basal_ffill_minutes: 0
+columns:
+  basal: basal_rate
+  bolus: bolus_volume_delivered
+  glucose: glucose
+  timestamp: time
+dataset: hupa_ucm
+device_type: HUPA-UCM preprocessed CGM and insulin records
+file_glob: '*.csv'
+grid_minutes: 5
+min_cgm_coverage: 0.7
+min_days_per_person: 7
+min_insulin_coverage: 0.9
+n_files_audited: 25
+person_id:
+  column: null
+  from: filename
+raw_dir: data/raw/hupa_ucm/Preprocessed
+source_id: S15
+tz: Europe/Madrid
+units:
+  basal: u_per_step
+  bolus: u
+  glucose: mg/dL

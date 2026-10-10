@@ -63,7 +63,10 @@ def _to_grid(df: pd.DataFrame, m: dict, dataset: str, person: pd.Series, log: li
     if "insulin_total" in cols:
         frame["insulin_total_u"] = pd.to_numeric(df.loc[keep, cols["insulin_total"]], errors="coerce").to_numpy()
     if "carb" in cols:
-        frame["carb_g"] = pd.to_numeric(df.loc[keep, cols["carb"]], errors="coerce").to_numpy()
+        carb_values = pd.to_numeric(df.loc[keep, cols["carb"]], errors="coerce")
+        if units.get("carb") == "serving_10g":
+            carb_values = carb_values * 10.0
+        frame["carb_g"] = carb_values.to_numpy()
     for r in ("isf_clinician", "cycle_day", "cycle_len"):
         if r in cols:
             frame[r] = pd.to_numeric(df.loc[keep, cols[r]], errors="coerce").to_numpy()

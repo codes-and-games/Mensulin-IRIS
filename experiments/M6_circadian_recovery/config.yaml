@@ -1,33 +1,42 @@
-experiment: M6_circadian_recovery
-seed: 20261004
-# Real-data circadian recovery (project document V2 / "M2. Circadian recovery on real data"). Datasets must be ingested first.
-datasets: [hupa_ucm, brist1d]
-grid_minutes: 5
-min_days: 7                  # consecutive analysable days required per person
-max_days: 28                 # cap on the analysed window (runtime; first qualifying run is used)
-min_cgm_coverage: 0.7        # per day
-min_insulin_coverage: 0.9    # per day (insulin record present in this fraction of grid steps)
-# T4 constants: ASSUMPTION levels (document T4: tauI 50-60 min, tauC ~40 min). Nuisance scale constants use rules of thumb ONLY as
-# scale nuisances (they cancel in the relative profile to first order); sensitivity to them is reported, not assumed away.
-tau_i_min: 55.0
-tau_c_min: 40.0
 ag: 0.9
-isf_rule_k: 1800.0
-icr_rule_k: 500.0
-nuisance_scales: [0.7, 1.0, 1.4]
-g_target: 120.0
-q_lns: 1.0e-4
-q_e: 1.0e-8
-q_g: 0.3
+alpha: 0.05
 cgm_sd: 10.0
+datasets:
+- brist1d
+experiment: M6_circadian_recovery
+g_target: 120.0
+grid_minutes: 5
+icr_rule_k: 500.0
+isf_rule_k: 1800.0
+max_days: 28
+min_cgm_coverage: 0.7
+min_days: 7
+min_insulin_coverage: 0.9
 n_boot: 500
 n_placebo: 1000
-alpha: 0.05
-synthetic: {n_persons: 8, n_days: 14, circadian_amp: 0.2}
+nuisance_scales:
+- 0.7
+- 1.0
+- 1.4
+q_e: 1.0e-08
+q_g: 0.3
+q_lns: 0.0001
+seed: 20261004
 smoke:
-  nuisance_scales: [1.0]
+  datasets:
+  - hupa_ucm
+  max_days: 10
   n_boot: 50
   n_placebo: 100
-  datasets: [hupa_ucm]
-  max_days: 10
-  synthetic: {n_persons: 4, n_days: 10, circadian_amp: 0.2}
+  nuisance_scales:
+  - 1.0
+  synthetic:
+    circadian_amp: 0.2
+    n_days: 10
+    n_persons: 4
+synthetic:
+  circadian_amp: 0.2
+  n_days: 14
+  n_persons: 8
+tau_c_min: 40.0
+tau_i_min: 55.0

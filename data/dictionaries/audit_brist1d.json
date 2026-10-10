@@ -1,0 +1,2575 @@
+{
+  "root": "data\\raw\\brist1d\\device_data\\processed_state",
+  "n_files": 20,
+  "files": [
+    {
+      "file": "P01.csv",
+      "n_rows": 136220,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 136220,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 74182,
+          "timestamp_like": true,
+          "ts_min": "2023-06-01 00:05:00",
+          "ts_max": "2023-12-20 15:30:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 136220,
+          "n_missing": 117245,
+          "missing_frac": 0.8607032741154016,
+          "n_unique": 224,
+          "min": 2.2,
+          "max": 27.8,
+          "mean": 8.80409486166008,
+          "median": 8.1,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 136220,
+          "n_missing": 77858,
+          "missing_frac": 0.5715607106151813,
+          "n_unique": 726,
+          "min": 0.0,
+          "max": 11.7417,
+          "mean": 0.13530409513039307,
+          "median": 0.0333,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 136220,
+          "n_missing": 135182,
+          "missing_frac": 0.9923799735721627,
+          "n_unique": 65,
+          "min": 3.0,
+          "max": 100.0,
+          "mean": 25.236030828516377,
+          "median": 20.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 136220,
+          "n_missing": 80223,
+          "missing_frac": 0.588922331522537,
+          "n_unique": 955,
+          "min": 45.8,
+          "max": 172.4,
+          "mean": 77.35433148204368,
+          "median": 76.0,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 136220,
+          "n_missing": 94677,
+          "missing_frac": 0.6950300983702834,
+          "n_unique": 2196,
+          "min": 0.0,
+          "max": 716.3,
+          "mean": 45.43051777676143,
+          "median": 10.1,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 136220,
+          "n_missing": 94677,
+          "missing_frac": 0.6950300983702834,
+          "n_unique": 657,
+          "min": 0.0,
+          "max": 766.0,
+          "mean": 66.36405651975062,
+          "median": 15.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 136220,
+          "n_missing": 78219,
+          "missing_frac": 0.574210835413302,
+          "n_unique": 1736,
+          "min": 0.96,
+          "max": 53.0,
+          "mean": 8.717174359062776,
+          "median": 5.69,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 136220,
+          "n_missing": 134672,
+          "missing_frac": 0.988636029951549,
+          "n_unique": 10,
+          "examples": [
+            "Walk",
+            "Indoor climbing",
+            "Yoga"
+          ],
+          "id_candidate": true
+        },
+        "device": {
+          "dtype": "str",
+          "n": 136220,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 3,
+          "examples": [
+            "Medtronic MiniMed 640G",
+            "FreeStyle Libre 2",
+            "Fitbit Luxe"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P02.csv",
+      "n_rows": 174856,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 174856,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 114746,
+          "timestamp_like": true,
+          "ts_min": "2023-06-01 00:01:00",
+          "ts_max": "2023-12-27 09:20:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 174856,
+          "n_missing": 120752,
+          "missing_frac": 0.6905796769913529,
+          "n_unique": 200,
+          "min": 2.2,
+          "max": 22.2,
+          "mean": 9.500743013455565,
+          "median": 8.9,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 174856,
+          "n_missing": 114561,
+          "missing_frac": 0.6551733998261426,
+          "n_unique": 4616,
+          "min": 0.0,
+          "max": 18.0833,
+          "mean": 0.17539450866572684,
+          "median": 0.0654,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 174856,
+          "n_missing": 174214,
+          "missing_frac": 0.9963284073752116,
+          "n_unique": 56,
+          "min": 10.0,
+          "max": 150.0,
+          "mean": 51.465732087227416,
+          "median": 50.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 174856,
+          "n_missing": 158527,
+          "missing_frac": 0.9066145857162465,
+          "n_unique": 993,
+          "min": 40.0,
+          "max": 187.1,
+          "mean": 83.25600465429604,
+          "median": 79.0,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 174856,
+          "n_missing": 162743,
+          "missing_frac": 0.9307258544173491,
+          "n_unique": 3486,
+          "min": 0.1,
+          "max": 1550.0,
+          "mean": 117.40741352266159,
+          "median": 70.4,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 174856,
+          "n_missing": 163529,
+          "missing_frac": 0.9352209818364826,
+          "n_unique": 954,
+          "min": 1.0,
+          "max": 1426.0,
+          "mean": 156.16535711132693,
+          "median": 80.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 174856,
+          "n_missing": 153823,
+          "missing_frac": 0.8797124491009746,
+          "n_unique": 2573,
+          "min": 0.01,
+          "max": 116.1,
+          "mean": 5.348414871868017,
+          "median": 3.02,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 174856,
+          "n_missing": 173829,
+          "missing_frac": 0.994126595598664,
+          "n_unique": 4,
+          "examples": [
+            "Walking",
+            "Running",
+            "Swimming"
+          ],
+          "id_candidate": true
+        },
+        "device": {
+          "dtype": "str",
+          "n": 174856,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 3,
+          "examples": [
+            "Dexcom G6",
+            "Tandem t:slim X2",
+            "Apple Watch Series 5"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P03.csv",
+      "n_rows": 82602,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 82602,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 55932,
+          "timestamp_like": true,
+          "ts_min": "2023-06-01 00:03:00",
+          "ts_max": "2023-09-06 11:25:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 82602,
+          "n_missing": 54950,
+          "missing_frac": 0.665238129827365,
+          "n_unique": 199,
+          "min": 2.2,
+          "max": 22.2,
+          "mean": 8.558169391002458,
+          "median": 7.8,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 82602,
+          "n_missing": 54539,
+          "missing_frac": 0.6602624633786107,
+          "n_unique": 4595,
+          "min": 0.0,
+          "max": 46.6663,
+          "mean": 0.27263770088728934,
+          "median": 0.1308,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 82602,
+          "n_missing": 82276,
+          "missing_frac": 0.996053364325319,
+          "n_unique": 51,
+          "min": 20.0,
+          "max": 168.0,
+          "mean": 74.14723926380368,
+          "median": 75.5,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 82602,
+          "n_missing": 57547,
+          "missing_frac": 0.6966780465364035,
+          "n_unique": 966,
+          "min": 47.2,
+          "max": 156.8,
+          "mean": 76.1322011574536,
+          "median": 74.0,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 82602,
+          "n_missing": 66158,
+          "missing_frac": 0.8009249170722259,
+          "n_unique": 796,
+          "min": 0.0,
+          "max": 384.0,
+          "mean": 13.757175869618099,
+          "median": 0.0,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 82602,
+          "n_missing": 66158,
+          "missing_frac": 0.8009249170722259,
+          "n_unique": 449,
+          "min": 0.0,
+          "max": 582.0,
+          "mean": 20.94563366577475,
+          "median": 0.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 82602,
+          "n_missing": 55980,
+          "missing_frac": 0.6777075615602528,
+          "n_unique": 1051,
+          "min": 1.12,
+          "max": 65.85,
+          "mean": 8.370446247464503,
+          "median": 5.84,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 82602,
+          "n_missing": 82490,
+          "missing_frac": 0.9986441006271035,
+          "n_unique": 1,
+          "examples": [
+            "Walk"
+          ],
+          "id_candidate": false
+        },
+        "device": {
+          "dtype": "str",
+          "n": 82602,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 3,
+          "examples": [
+            "Dexcom G6",
+            "Tandem t:slim X2",
+            "Fitbit Sense"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P04.csv",
+      "n_rows": 183068,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 183068,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 121716,
+          "timestamp_like": true,
+          "ts_min": "2023-06-06 00:02:00",
+          "ts_max": "2024-01-10 21:25:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 183068,
+          "n_missing": 125037,
+          "missing_frac": 0.6830084995739288,
+          "n_unique": 183,
+          "min": 2.2,
+          "max": 22.2,
+          "mean": 7.813282555875308,
+          "median": 7.4,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 183068,
+          "n_missing": 120046,
+          "missing_frac": 0.6557454060786156,
+          "n_unique": 4063,
+          "min": 0.0,
+          "max": 42.78,
+          "mean": 0.14946038526228936,
+          "median": 0.0625,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 183068,
+          "n_missing": 182004,
+          "missing_frac": 0.9941879520178294,
+          "n_unique": 74,
+          "min": 5.0,
+          "max": 130.0,
+          "mean": 29.139097744360903,
+          "median": 24.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 183068,
+          "n_missing": 161990,
+          "missing_frac": 0.8848624554810235,
+          "n_unique": 982,
+          "min": 49.3,
+          "max": 164.4,
+          "mean": 83.5011481165196,
+          "median": 82.4,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 183068,
+          "n_missing": 146404,
+          "missing_frac": 0.7997246924640025,
+          "n_unique": 2181,
+          "min": 0.0,
+          "max": 1293.3,
+          "mean": 23.5099907265983,
+          "median": 0.0,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 183068,
+          "n_missing": 146404,
+          "missing_frac": 0.7997246924640025,
+          "n_unique": 735,
+          "min": 0.0,
+          "max": 1263.0,
+          "mean": 32.35623499890901,
+          "median": 0.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 183068,
+          "n_missing": 122918,
+          "missing_frac": 0.6714335656695872,
+          "n_unique": 1040,
+          "min": 0.91,
+          "max": 80.92,
+          "mean": 6.181518703241895,
+          "median": 4.55,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 183068,
+          "n_missing": 182218,
+          "missing_frac": 0.9953569165555969,
+          "n_unique": 5,
+          "examples": [
+            "Walk",
+            "Run",
+            "Sport"
+          ],
+          "id_candidate": true
+        },
+        "device": {
+          "dtype": "str",
+          "n": 183068,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 3,
+          "examples": [
+            "Dexcom G6",
+            "Tandem t:slim X2",
+            "Fitbit Versa 4"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P05.csv",
+      "n_rows": 148201,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 148201,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 80683,
+          "timestamp_like": true,
+          "ts_min": "2023-06-01 00:05:00",
+          "ts_max": "2024-01-09 18:00:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 148201,
+          "n_missing": 128377,
+          "missing_frac": 0.8662357204067449,
+          "n_unique": 204,
+          "min": 2.2,
+          "max": 27.8,
+          "mean": 8.373804479418885,
+          "median": 7.9,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 148201,
+          "n_missing": 84049,
+          "missing_frac": 0.5671284269336914,
+          "n_unique": 1065,
+          "min": 0.0,
+          "max": 10.0667,
+          "mean": 0.1443768191170969,
+          "median": 0.0771,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 148201,
+          "n_missing": 147182,
+          "missing_frac": 0.9931242029406009,
+          "n_unique": 35,
+          "min": 2.0,
+          "max": 65.0,
+          "mean": 26.439646712463198,
+          "median": 25.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 148201,
+          "n_missing": 90131,
+          "missing_frac": 0.6081672863206051,
+          "n_unique": 994,
+          "min": 43.1,
+          "max": 165.3,
+          "mean": 73.65081109006371,
+          "median": 73.6,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 148201,
+          "n_missing": 112786,
+          "missing_frac": 0.7610340011201004,
+          "n_unique": 2043,
+          "min": 0.0,
+          "max": 608.6,
+          "mean": 26.491080050825925,
+          "median": 4.5,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 148201,
+          "n_missing": 112786,
+          "missing_frac": 0.7610340011201004,
+          "n_unique": 643,
+          "min": 0.0,
+          "max": 685.0,
+          "mean": 40.054891994917405,
+          "median": 7.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 148201,
+          "n_missing": 90419,
+          "missing_frac": 0.6101105930459308,
+          "n_unique": 2382,
+          "min": 1.13,
+          "max": 48.85,
+          "mean": 7.115471946280849,
+          "median": 4.9,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 148201,
+          "n_missing": 147534,
+          "missing_frac": 0.995499355604888,
+          "n_unique": 10,
+          "examples": [
+            "Swim",
+            "Walk",
+            "Weights"
+          ],
+          "id_candidate": true
+        },
+        "device": {
+          "dtype": "str",
+          "n": 148201,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 3,
+          "examples": [
+            "Medtronic MiniMed 640G",
+            " FreeStyle Libre 2",
+            "Fitbit Versa 4"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P06.csv",
+      "n_rows": 132444,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 132444,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 72869,
+          "timestamp_like": true,
+          "ts_min": "2023-06-01 00:05:00",
+          "ts_max": "2023-12-18 10:35:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 132444,
+          "n_missing": 114291,
+          "missing_frac": 0.8629382984506659,
+          "n_unique": 243,
+          "min": 2.9,
+          "max": 27.8,
+          "mean": 9.4038671294001,
+          "median": 8.4,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 132444,
+          "n_missing": 74851,
+          "missing_frac": 0.565152064268672,
+          "n_unique": 498,
+          "min": 0.0,
+          "max": 18.0875,
+          "mean": 0.20386475092459153,
+          "median": 0.0833,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 132444,
+          "n_missing": 131920,
+          "missing_frac": 0.9960436108846003,
+          "n_unique": 90,
+          "min": 7.0,
+          "max": 130.0,
+          "mean": 50.33587786259542,
+          "median": 45.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 132444,
+          "n_missing": 88981,
+          "missing_frac": 0.6718386638881338,
+          "n_unique": 973,
+          "min": 37.6,
+          "max": 199.3,
+          "mean": 72.10504337022294,
+          "median": 71.2,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 132444,
+          "n_missing": 98632,
+          "missing_frac": 0.7447071970040168,
+          "n_unique": 2327,
+          "min": 0.0,
+          "max": 775.4,
+          "mean": 46.60330947592571,
+          "median": 5.2,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 132444,
+          "n_missing": 98632,
+          "missing_frac": 0.7447071970040168,
+          "n_unique": 625,
+          "min": 0.0,
+          "max": 689.0,
+          "mean": 62.25777830356087,
+          "median": 7.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 132444,
+          "n_missing": 76274,
+          "missing_frac": 0.5758962278396907,
+          "n_unique": 1183,
+          "min": 1.23,
+          "max": 78.27,
+          "mean": 10.824220224319031,
+          "median": 6.65,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 132444,
+          "n_missing": 131201,
+          "missing_frac": 0.9906149013922866,
+          "n_unique": 6,
+          "examples": [
+            "Sport",
+            "Walk",
+            "Swim"
+          ],
+          "id_candidate": true
+        },
+        "device": {
+          "dtype": "str",
+          "n": 132444,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 3,
+          "examples": [
+            "Omnipod Eros",
+            "FreeStyle Libre 2",
+            "Fitbit Luxe"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P07.csv",
+      "n_rows": 128824,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 128824,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 91176,
+          "timestamp_like": true,
+          "ts_min": "2023-06-01 00:05:00",
+          "ts_max": "2023-12-27 10:33:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 128824,
+          "n_missing": 70931,
+          "missing_frac": 0.5506039247345215,
+          "n_unique": 202,
+          "min": 2.2,
+          "max": 22.3,
+          "mean": 9.649522394762753,
+          "median": 8.7,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 128824,
+          "n_missing": 118913,
+          "missing_frac": 0.923065577842638,
+          "n_unique": 187,
+          "min": 0.0,
+          "max": 18.2417,
+          "mean": 0.18187654121682978,
+          "median": 0.0708,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 128824,
+          "n_missing": 128059,
+          "missing_frac": 0.9940616655281624,
+          "n_unique": 83,
+          "min": 3.0,
+          "max": 148.0,
+          "mean": 47.12679738562092,
+          "median": 40.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 128824,
+          "n_missing": 91673,
+          "missing_frac": 0.7116142954728932,
+          "n_unique": 1112,
+          "min": 40.0,
+          "max": 184.2,
+          "mean": 79.01349627197115,
+          "median": 74.0,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 128824,
+          "n_missing": 116583,
+          "missing_frac": 0.9049788859218779,
+          "n_unique": 3244,
+          "min": 0.1,
+          "max": 1737.7,
+          "mean": 105.39064618903686,
+          "median": 47.8,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 128824,
+          "n_missing": 117430,
+          "missing_frac": 0.9115537477488667,
+          "n_unique": 1057,
+          "min": 1.0,
+          "max": 1830.0,
+          "mean": 162.55467790064947,
+          "median": 64.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 128824,
+          "n_missing": 93292,
+          "missing_frac": 0.7241818294727691,
+          "n_unique": 2538,
+          "min": 0.01,
+          "max": 75.15,
+          "mean": 3.028274231678487,
+          "median": 1.34,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 128824,
+          "n_missing": 126436,
+          "missing_frac": 0.9814630814134012,
+          "n_unique": 7,
+          "examples": [
+            "Walking",
+            "Swimming",
+            "FunctionalStrengthTraining"
+          ],
+          "id_candidate": true
+        },
+        "device": {
+          "dtype": "str",
+          "n": 128824,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 4,
+          "examples": [
+            "Omnipod Eros",
+            "Apple Watch Series 5",
+            "Dexcom G6"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P10.csv",
+      "n_rows": 165048,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 165048,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 96255,
+          "timestamp_like": true,
+          "ts_min": "2023-06-01 00:03:00",
+          "ts_max": "2023-12-22 14:35:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 165048,
+          "n_missing": 117977,
+          "missing_frac": 0.7148041781784693,
+          "n_unique": 152,
+          "min": 2.2,
+          "max": 17.6,
+          "mean": 6.749299993626649,
+          "median": 6.3,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 165048,
+          "n_missing": 106111,
+          "missing_frac": 0.642909941350395,
+          "n_unique": 3181,
+          "min": 0.0,
+          "max": 14.1042,
+          "mean": 0.102163418565587,
+          "median": 0.0577,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 165048,
+          "n_missing": 164342,
+          "missing_frac": 0.9957224564975038,
+          "n_unique": 75,
+          "min": 10.0,
+          "max": 130.0,
+          "mean": 50.27620396600567,
+          "median": 50.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 165048,
+          "n_missing": 113002,
+          "missing_frac": 0.6846614318258931,
+          "n_unique": 1087,
+          "min": 47.4,
+          "max": 199.1,
+          "mean": 80.50074933712484,
+          "median": 80.0,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 165048,
+          "n_missing": 129009,
+          "missing_frac": 0.7816453395375891,
+          "n_unique": 3322,
+          "min": 0.0,
+          "max": 1181.3,
+          "mean": 51.3164738200283,
+          "median": 5.0,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 165048,
+          "n_missing": 129009,
+          "missing_frac": 0.7816453395375891,
+          "n_unique": 722,
+          "min": 0.0,
+          "max": 788.0,
+          "mean": 69.03024501234773,
+          "median": 7.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 165048,
+          "n_missing": 112468,
+          "missing_frac": 0.6814260094033251,
+          "n_unique": 1897,
+          "min": 1.41,
+          "max": 71.77,
+          "mean": 10.984380562951692,
+          "median": 7.17,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 165048,
+          "n_missing": 162499,
+          "missing_frac": 0.9845560079492026,
+          "n_unique": 5,
+          "examples": [
+            "Walk",
+            "Run",
+            "Sport"
+          ],
+          "id_candidate": true
+        },
+        "device": {
+          "dtype": "str",
+          "n": 165048,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 3,
+          "examples": [
+            "Dexcom G6",
+            "Tandem t:slim X2",
+            "Fitbit Versa 4"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P11.csv",
+      "n_rows": 167251,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 167251,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 102794,
+          "timestamp_like": true,
+          "ts_min": "2023-06-01 00:01:19",
+          "ts_max": "2024-01-08 16:45:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 167251,
+          "n_missing": 114692,
+          "missing_frac": 0.6857477683242552,
+          "n_unique": 189,
+          "min": 2.2,
+          "max": 23.1,
+          "mean": 8.993945851328984,
+          "median": 8.7,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 167251,
+          "n_missing": 115551,
+          "missing_frac": 0.6908837615320685,
+          "n_unique": 4223,
+          "min": 0.0,
+          "max": 15.061,
+          "mean": 0.17533509284332688,
+          "median": 0.1083,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 167251,
+          "n_missing": 166504,
+          "missing_frac": 0.9955336589915755,
+          "n_unique": 57,
+          "min": 1.0,
+          "max": 110.0,
+          "mean": 35.11244979919679,
+          "median": 30.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 167251,
+          "n_missing": 134916,
+          "missing_frac": 0.8066678226139156,
+          "n_unique": 959,
+          "min": 49.7,
+          "max": 164.8,
+          "mean": 78.6018648523272,
+          "median": 77.2,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 167251,
+          "n_missing": 145610,
+          "missing_frac": 0.8706076495805706,
+          "n_unique": 1453,
+          "min": 0.0,
+          "max": 613.2,
+          "mean": 38.07357330992098,
+          "median": 5.8,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 167251,
+          "n_missing": 145610,
+          "missing_frac": 0.8706076495805706,
+          "n_unique": 578,
+          "min": 0.0,
+          "max": 660.0,
+          "mean": 51.2014232244351,
+          "median": 8.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 167251,
+          "n_missing": 104864,
+          "missing_frac": 0.6269857878278755,
+          "n_unique": 2171,
+          "min": 1.19,
+          "max": 66.39,
+          "mean": 7.900954365492812,
+          "median": 6.0,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 167251,
+          "n_missing": 166523,
+          "missing_frac": 0.9956472607039719,
+          "n_unique": 9,
+          "examples": [
+            "Run",
+            "Walk",
+            "Workout"
+          ],
+          "id_candidate": true
+        },
+        "device": {
+          "dtype": "str",
+          "n": 167251,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 4,
+          "examples": [
+            "Dexcom G6",
+            "Fitbit Sense",
+            "Medtronic MiniMed 640G"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P12.csv",
+      "n_rows": 176293,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 176293,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 116330,
+          "timestamp_like": true,
+          "ts_min": "2023-06-01 00:03:00",
+          "ts_max": "2024-01-10 13:05:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 176293,
+          "n_missing": 114728,
+          "missing_frac": 0.6507802351766662,
+          "n_unique": 194,
+          "min": 2.8,
+          "max": 22.2,
+          "mean": 8.288345650938034,
+          "median": 7.5,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 176293,
+          "n_missing": 126780,
+          "missing_frac": 0.7191436982750308,
+          "n_unique": 759,
+          "min": -0.3078,
+          "max": 25.35,
+          "mean": 0.3581541231595743,
+          "median": 0.1,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 176293,
+          "n_missing": 175264,
+          "missing_frac": 0.9941631261592916,
+          "n_unique": 91,
+          "min": 1.0,
+          "max": 143.0,
+          "mean": 51.4198250728863,
+          "median": 40.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 176293,
+          "n_missing": 115761,
+          "missing_frac": 0.6566397985172412,
+          "n_unique": 870,
+          "min": 46.6,
+          "max": 151.3,
+          "mean": 85.53192691468975,
+          "median": 83.8,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 176293,
+          "n_missing": 136642,
+          "missing_frac": 0.7750846601963777,
+          "n_unique": 1552,
+          "min": 0.0,
+          "max": 412.0,
+          "mean": 31.62599682227434,
+          "median": 10.3,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 176293,
+          "n_missing": 136642,
+          "missing_frac": 0.7750846601963777,
+          "n_unique": 506,
+          "min": 0.0,
+          "max": 599.0,
+          "mean": 46.12741166679277,
+          "median": 15.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 176293,
+          "n_missing": 114803,
+          "missing_frac": 0.6512056632991667,
+          "n_unique": 1819,
+          "min": 1.35,
+          "max": 73.57,
+          "mean": 13.829098715238251,
+          "median": 7.83,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 176293,
+          "n_missing": 176026,
+          "missing_frac": 0.9984854758838978,
+          "n_unique": 4,
+          "examples": [
+            "Walk",
+            "Workout",
+            "Treadmill"
+          ],
+          "id_candidate": true
+        },
+        "device": {
+          "dtype": "str",
+          "n": 176293,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 3,
+          "examples": [
+            "Medtronic Guardian 4",
+            "Medtronic MiniMed 780G",
+            "Fitbit Versa 4"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P13.csv",
+      "n_rows": 63310,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 63310,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 34601,
+          "timestamp_like": true,
+          "ts_min": "2023-06-01 00:05:00",
+          "ts_max": "2023-09-03 22:00:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 63310,
+          "n_missing": 54571,
+          "missing_frac": 0.861964934449534,
+          "n_unique": 163,
+          "min": 2.9,
+          "max": 21.5,
+          "mean": 8.470133882595263,
+          "median": 8.2,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 63310,
+          "n_missing": 36261,
+          "missing_frac": 0.572753119570368,
+          "n_unique": 430,
+          "min": 0.0,
+          "max": 17.2958,
+          "mean": 0.14717347036859033,
+          "median": 0.0992,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 63310,
+          "n_missing": 63065,
+          "missing_frac": 0.9961301532143422,
+          "n_unique": 80,
+          "min": 10.9,
+          "max": 80.0,
+          "mean": 39.46530612244898,
+          "median": 38.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 63310,
+          "n_missing": 42582,
+          "missing_frac": 0.6725951666403411,
+          "n_unique": 631,
+          "min": 40.0,
+          "max": 162.0,
+          "mean": 75.81348417599382,
+          "median": 74.0,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 63310,
+          "n_missing": 57338,
+          "missing_frac": 0.905670510187964,
+          "n_unique": 1551,
+          "min": 0.3,
+          "max": 808.4,
+          "mean": 51.96520428667113,
+          "median": 29.4,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 63310,
+          "n_missing": 57430,
+          "missing_frac": 0.907123677144211,
+          "n_unique": 412,
+          "min": 1.0,
+          "max": 1392.0,
+          "mean": 69.31768707482993,
+          "median": 38.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 63310,
+          "n_missing": 43748,
+          "missing_frac": 0.6910124782814722,
+          "n_unique": 885,
+          "min": 0.01,
+          "max": 28.42,
+          "mean": 1.5890057253859522,
+          "median": 1.31,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 63310,
+          "n_missing": 63225,
+          "missing_frac": 0.9986574000947718,
+          "n_unique": 1,
+          "examples": [
+            "Walking"
+          ],
+          "id_candidate": false
+        },
+        "device": {
+          "dtype": "str",
+          "n": 63310,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 3,
+          "examples": [
+            "Omnipod Dash",
+            "Apple Watch SE",
+            "FreeStyle Libre 2"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P15.csv",
+      "n_rows": 167535,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 167535,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 128046,
+          "timestamp_like": true,
+          "ts_min": "2023-06-01 00:05:00",
+          "ts_max": "2024-01-12 17:46:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 167535,
+          "n_missing": 105684,
+          "missing_frac": 0.6308174411317038,
+          "n_unique": 198,
+          "min": 2.2,
+          "max": 22.2,
+          "mean": 8.44892402709738,
+          "median": 8.0,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 167535,
+          "n_missing": 110874,
+          "missing_frac": 0.6617960426179604,
+          "n_unique": 214,
+          "min": 0.0,
+          "max": 12.0667,
+          "mean": 0.15799086496884981,
+          "median": 0.0667,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 167535,
+          "n_missing": 165643,
+          "missing_frac": 0.9887068373772645,
+          "n_unique": 16,
+          "min": 3.0,
+          "max": 30.0,
+          "mean": 9.77061310782241,
+          "median": 10.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 167535,
+          "n_missing": 153971,
+          "missing_frac": 0.9190378129942997,
+          "n_unique": 927,
+          "min": 54.6,
+          "max": 188.3,
+          "mean": 94.55378207018579,
+          "median": 92.7,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 167535,
+          "n_missing": 153869,
+          "missing_frac": 0.9184289849882115,
+          "n_unique": 1597,
+          "min": 0.0,
+          "max": 749.9,
+          "mean": 50.83645543685058,
+          "median": 16.8,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 167535,
+          "n_missing": 153869,
+          "missing_frac": 0.9184289849882115,
+          "n_unique": 605,
+          "min": 0.0,
+          "max": 1376.0,
+          "mean": 75.10017561832285,
+          "median": 22.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 167535,
+          "n_missing": 120033,
+          "missing_frac": 0.7164652162234757,
+          "n_unique": 942,
+          "min": 0.89,
+          "max": 46.83,
+          "mean": 6.109011620563345,
+          "median": 4.5,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 167535,
+          "n_missing": 165227,
+          "missing_frac": 0.9862237741367476,
+          "n_unique": 4,
+          "examples": [
+            "Walk",
+            "Hike",
+            "Aerobic Workout"
+          ],
+          "id_candidate": true
+        },
+        "device": {
+          "dtype": "str",
+          "n": 167535,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 3,
+          "examples": [
+            "Medtronic MiniMed 640G",
+            "Dexcom One",
+            "Fitbit Sense"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P16.csv",
+      "n_rows": 162371,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 162371,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 105012,
+          "timestamp_like": true,
+          "ts_min": "2023-06-05 02:11:00",
+          "ts_max": "2023-12-20 10:55:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 162371,
+          "n_missing": 106838,
+          "missing_frac": 0.6579869557987572,
+          "n_unique": 141,
+          "min": 2.8,
+          "max": 17.6,
+          "mean": 8.409734752309438,
+          "median": 8.2,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 162371,
+          "n_missing": 113949,
+          "missing_frac": 0.7017817221055485,
+          "n_unique": 345,
+          "min": 0.0,
+          "max": 2.2,
+          "mean": 0.08160504522737598,
+          "median": 0.05,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 162371,
+          "n_missing": 160072,
+          "missing_frac": 0.9858410676783416,
+          "n_unique": 20,
+          "min": 1.0,
+          "max": 20.0,
+          "mean": 8.070900391474554,
+          "median": 9.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 162371,
+          "n_missing": 117213,
+          "missing_frac": 0.721883833935863,
+          "n_unique": 796,
+          "min": 49.6,
+          "max": 150.9,
+          "mean": 77.18821249833915,
+          "median": 75.7,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 162371,
+          "n_missing": 130948,
+          "missing_frac": 0.8064740624865278,
+          "n_unique": 1347,
+          "min": 0.0,
+          "max": 573.8,
+          "mean": 18.77478280240588,
+          "median": 0.0,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 162371,
+          "n_missing": 130948,
+          "missing_frac": 0.8064740624865278,
+          "n_unique": 538,
+          "min": 0.0,
+          "max": 654.0,
+          "mean": 27.878846704643095,
+          "median": 0.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 162371,
+          "n_missing": 105803,
+          "missing_frac": 0.6516126648231519,
+          "n_unique": 853,
+          "min": 0.77,
+          "max": 33.86,
+          "mean": 5.220791967189931,
+          "median": 3.92,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 162371,
+          "n_missing": 161764,
+          "missing_frac": 0.9962616477080267,
+          "n_unique": 2,
+          "examples": [
+            "Walk",
+            "Outdoor Bike"
+          ],
+          "id_candidate": true
+        },
+        "device": {
+          "dtype": "str",
+          "n": 162371,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 3,
+          "examples": [
+            "Medtronic Guardian 4",
+            "Medtronic MiniMed 780G",
+            "Fitbit Luxe"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P17.csv",
+      "n_rows": 110866,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 110866,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 98757,
+          "timestamp_like": true,
+          "ts_min": "2023-06-01 10:50:00",
+          "ts_max": "2023-12-21 10:30:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 110866,
+          "n_missing": 58941,
+          "missing_frac": 0.5316418018148035,
+          "n_unique": 201,
+          "min": 2.2,
+          "max": 22.3,
+          "mean": 8.864857005296098,
+          "median": 8.4,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 110866,
+          "n_missing": 110866,
+          "missing_frac": 1.0,
+          "n_unique": 0,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 110866,
+          "n_missing": 110386,
+          "missing_frac": 0.9956704490105172,
+          "n_unique": 43,
+          "min": 2.0,
+          "max": 132.0,
+          "mean": 34.32395833333333,
+          "median": 35.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 110866,
+          "n_missing": 87552,
+          "missing_frac": 0.7897101004816626,
+          "n_unique": 883,
+          "min": 40.5,
+          "max": 177.8,
+          "mean": 87.14272111177833,
+          "median": 84.0,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 110866,
+          "n_missing": 99777,
+          "missing_frac": 0.8999783522450526,
+          "n_unique": 2341,
+          "min": 0.4,
+          "max": 1442.6,
+          "mean": 66.7836414464785,
+          "median": 40.3,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 110866,
+          "n_missing": 99840,
+          "missing_frac": 0.9005466058124222,
+          "n_unique": 584,
+          "min": 1.0,
+          "max": 1273.0,
+          "mean": 88.1573553419191,
+          "median": 51.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 110866,
+          "n_missing": 86745,
+          "missing_frac": 0.7824310428805946,
+          "n_unique": 2335,
+          "min": 0.0,
+          "max": 77.71,
+          "mean": 4.117299034036732,
+          "median": 2.15,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 110866,
+          "n_missing": 105515,
+          "missing_frac": 0.9517345263651615,
+          "n_unique": 11,
+          "examples": [
+            "Other",
+            "Walking",
+            "FunctionalStrengthTraining"
+          ],
+          "id_candidate": true
+        },
+        "device": {
+          "dtype": "str",
+          "n": 110866,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 3,
+          "examples": [
+            "Apple Watch Series 6",
+            "Dexcom G6",
+            "Omnipod 5"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P18.csv",
+      "n_rows": 143006,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 143006,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 101812,
+          "timestamp_like": true,
+          "ts_min": "2023-06-01 00:05:00",
+          "ts_max": "2024-01-10 14:45:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 143006,
+          "n_missing": 95636,
+          "missing_frac": 0.6687551571262744,
+          "n_unique": 201,
+          "min": 2.2,
+          "max": 22.2,
+          "mean": 10.928319611568503,
+          "median": 10.3,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 143006,
+          "n_missing": 106327,
+          "missing_frac": 0.743514258143015,
+          "n_unique": 486,
+          "min": 0.0,
+          "max": 13.3125,
+          "mean": 0.15247661059461817,
+          "median": 0.0875,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 143006,
+          "n_missing": 142589,
+          "missing_frac": 0.9970840384319539,
+          "n_unique": 79,
+          "min": 3.0,
+          "max": 95.0,
+          "mean": 37.90407673860911,
+          "median": 38.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 143006,
+          "n_missing": 124283,
+          "missing_frac": 0.8690754234088081,
+          "n_unique": 920,
+          "min": 40.0,
+          "max": 194.0,
+          "mean": 77.48787053356833,
+          "median": 73.0,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 143006,
+          "n_missing": 133747,
+          "missing_frac": 0.9352544648476288,
+          "n_unique": 2620,
+          "min": 0.5,
+          "max": 4553.5,
+          "mean": 87.9385138783886,
+          "median": 44.8,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 143006,
+          "n_missing": 134015,
+          "missing_frac": 0.9371285120904018,
+          "n_unique": 767,
+          "min": 1.0,
+          "max": 1705.0,
+          "mean": 120.82504726949172,
+          "median": 58.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 143006,
+          "n_missing": 120568,
+          "missing_frac": 0.8430974924129058,
+          "n_unique": 1907,
+          "min": 0.01,
+          "max": 312.38,
+          "mean": 3.5134459399233444,
+          "median": 1.97,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 143006,
+          "n_missing": 142814,
+          "missing_frac": 0.9986573989902522,
+          "n_unique": 6,
+          "examples": [
+            "Yoga",
+            "HighIntensityIntervalTraining",
+            "Running"
+          ],
+          "id_candidate": true
+        },
+        "device": {
+          "dtype": "str",
+          "n": 143006,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 4,
+          "examples": [
+            "Medtronic MiniMed 780G",
+            "Dexcom One",
+            "Apple Watch Series 5"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P19.csv",
+      "n_rows": 175818,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 175818,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 107240,
+          "timestamp_like": true,
+          "ts_min": "2023-06-01 00:02:00",
+          "ts_max": "2023-12-21 16:45:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 175818,
+          "n_missing": 117888,
+          "missing_frac": 0.670511551718254,
+          "n_unique": 196,
+          "min": 2.2,
+          "max": 22.2,
+          "mean": 8.676214396685655,
+          "median": 8.3,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 175818,
+          "n_missing": 117152,
+          "missing_frac": 0.6663254046798394,
+          "n_unique": 5852,
+          "min": 0.0,
+          "max": 27.5506,
+          "mean": 0.3188397998840896,
+          "median": 0.1417,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 175818,
+          "n_missing": 174988,
+          "missing_frac": 0.9952792091822226,
+          "n_unique": 28,
+          "min": 3.0,
+          "max": 60.0,
+          "mean": 31.712048192771086,
+          "median": 30.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 175818,
+          "n_missing": 147435,
+          "missing_frac": 0.8385660171313517,
+          "n_unique": 737,
+          "min": 49.0,
+          "max": 173.5,
+          "mean": 77.34269104745799,
+          "median": 73.0,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 175818,
+          "n_missing": 167730,
+          "missing_frac": 0.9539978841756817,
+          "n_unique": 2550,
+          "min": 0.5,
+          "max": 1025.3,
+          "mean": 93.80108803165183,
+          "median": 58.4,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 175818,
+          "n_missing": 168229,
+          "missing_frac": 0.9568360463661286,
+          "n_unique": 755,
+          "min": 1.0,
+          "max": 1415.0,
+          "mean": 141.51996310449334,
+          "median": 80.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 175818,
+          "n_missing": 148939,
+          "missing_frac": 0.8471203176011557,
+          "n_unique": 1774,
+          "min": 0.01,
+          "max": 57.45,
+          "mean": 3.064276200751516,
+          "median": 1.86,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 175818,
+          "n_missing": 175784,
+          "missing_frac": 0.9998066182074645,
+          "n_unique": 1,
+          "examples": [
+            "Walking"
+          ],
+          "id_candidate": false
+        },
+        "device": {
+          "dtype": "str",
+          "n": 175818,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 3,
+          "examples": [
+            "Dexcom G6",
+            "Tandem t:slim X2",
+            "Apple Watch Series 7"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P21.csv",
+      "n_rows": 133726,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 133726,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 78019,
+          "timestamp_like": true,
+          "ts_min": "2023-06-01 00:03:00",
+          "ts_max": "2023-12-29 14:25:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 133726,
+          "n_missing": 111194,
+          "missing_frac": 0.8315062141991834,
+          "n_unique": 251,
+          "min": 2.2,
+          "max": 27.8,
+          "mean": 10.992384164743475,
+          "median": 10.7,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 133726,
+          "n_missing": 81154,
+          "missing_frac": 0.6068677744043791,
+          "n_unique": 752,
+          "min": 0.0,
+          "max": 8.4083,
+          "mean": 0.11426471695959826,
+          "median": 0.075,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 133726,
+          "n_missing": 133012,
+          "missing_frac": 0.9946607241673272,
+          "n_unique": 25,
+          "min": 1.0,
+          "max": 70.0,
+          "mean": 18.92156862745098,
+          "median": 20.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 133726,
+          "n_missing": 108137,
+          "missing_frac": 0.8086460374197987,
+          "n_unique": 1131,
+          "min": 42.8,
+          "max": 192.8,
+          "mean": 69.50519363789128,
+          "median": 63.9,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 133726,
+          "n_missing": 105258,
+          "missing_frac": 0.7871169406099038,
+          "n_unique": 2409,
+          "min": 0.0,
+          "max": 939.1,
+          "mean": 44.80963889279191,
+          "median": 0.0,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 133726,
+          "n_missing": 105258,
+          "missing_frac": 0.7871169406099038,
+          "n_unique": 787,
+          "min": 0.0,
+          "max": 1103.0,
+          "mean": 61.83658845018969,
+          "median": 0.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 133726,
+          "n_missing": 75687,
+          "missing_frac": 0.5659856721953845,
+          "n_unique": 1377,
+          "min": 0.9,
+          "max": 68.92,
+          "mean": 6.861335481314288,
+          "median": 4.5,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 133726,
+          "n_missing": 132558,
+          "missing_frac": 0.9912657224473924,
+          "n_unique": 8,
+          "examples": [
+            "Walk",
+            "Run",
+            "Outdoor Bike"
+          ],
+          "id_candidate": true
+        },
+        "device": {
+          "dtype": "str",
+          "n": 133726,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 4,
+          "examples": [
+            "FreeStyle Libre 2",
+            "Fitbit Luxe",
+            "Omnipod Dash"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P22.csv",
+      "n_rows": 170663,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 170663,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 109484,
+          "timestamp_like": true,
+          "ts_min": "2023-06-01 00:05:00",
+          "ts_max": "2023-12-30 12:57:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 170663,
+          "n_missing": 120949,
+          "missing_frac": 0.7087007728681671,
+          "n_unique": 194,
+          "min": 2.2,
+          "max": 22.2,
+          "mean": 7.881260811843746,
+          "median": 7.3,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 170663,
+          "n_missing": 109450,
+          "missing_frac": 0.6413223721603394,
+          "n_unique": 3832,
+          "min": 0.0,
+          "max": 16.6489,
+          "mean": 0.13312476598108244,
+          "median": 0.0687,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 170663,
+          "n_missing": 169600,
+          "missing_frac": 0.9937713505563596,
+          "n_unique": 30,
+          "min": 1.0,
+          "max": 67.0,
+          "mean": 23.377234242709314,
+          "median": 20.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 170663,
+          "n_missing": 148018,
+          "missing_frac": 0.8673116023977078,
+          "n_unique": 864,
+          "min": 51.0,
+          "max": 161.1,
+          "mean": 84.9035151247516,
+          "median": 83.3,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 170663,
+          "n_missing": 141449,
+          "missing_frac": 0.828820541066312,
+          "n_unique": 1728,
+          "min": 0.0,
+          "max": 634.9,
+          "mean": 20.072763058807418,
+          "median": 0.0,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 170663,
+          "n_missing": 141449,
+          "missing_frac": 0.828820541066312,
+          "n_unique": 577,
+          "min": 0.0,
+          "max": 682.0,
+          "mean": 32.043951530088314,
+          "median": 0.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 170663,
+          "n_missing": 111811,
+          "missing_frac": 0.655156653756233,
+          "n_unique": 1099,
+          "min": 0.8,
+          "max": 43.76,
+          "mean": 5.335927920886291,
+          "median": 4.0,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 170663,
+          "n_missing": 170098,
+          "missing_frac": 0.9966893819984414,
+          "n_unique": 5,
+          "examples": [
+            "Walk",
+            "Pilates",
+            "Aerobic Workout"
+          ],
+          "id_candidate": true
+        },
+        "device": {
+          "dtype": "str",
+          "n": 170663,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 3,
+          "examples": [
+            "Tandem t:slim X2",
+            "Dexcom G6",
+            "Fitbit Versa 4"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P23.csv",
+      "n_rows": 74945,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 74945,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 39277,
+          "timestamp_like": true,
+          "ts_min": "2023-06-06 01:00:00",
+          "ts_max": "2023-09-13 13:55:00",
+          "tz_aware": false,
+          "id_candidate": false
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 74945,
+          "n_missing": 57026,
+          "missing_frac": 0.7609046634198412,
+          "n_unique": 199,
+          "min": 2.2,
+          "max": 22.2,
+          "mean": 8.03147497070149,
+          "median": 7.2,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 74945,
+          "n_missing": 46865,
+          "missing_frac": 0.6253252385082394,
+          "n_unique": 3158,
+          "min": 0.0,
+          "max": 17.5108,
+          "mean": 0.16160742521367522,
+          "median": 0.08895,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 74945,
+          "n_missing": 74595,
+          "missing_frac": 0.9953299085996398,
+          "n_unique": 56,
+          "min": 4.0,
+          "max": 85.0,
+          "mean": 31.994285714285713,
+          "median": 28.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 74945,
+          "n_missing": 47620,
+          "missing_frac": 0.6353992928147308,
+          "n_unique": 988,
+          "min": 44.8,
+          "max": 162.9,
+          "mean": 75.86452698993595,
+          "median": 73.6,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 74945,
+          "n_missing": 59728,
+          "missing_frac": 0.7969577690306224,
+          "n_unique": 983,
+          "min": 0.0,
+          "max": 507.9,
+          "mean": 16.53448774397056,
+          "median": 0.0,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 74945,
+          "n_missing": 59728,
+          "missing_frac": 0.7969577690306224,
+          "n_unique": 479,
+          "min": 0.0,
+          "max": 652.0,
+          "mean": 25.588026549254124,
+          "median": 0.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 74945,
+          "n_missing": 46277,
+          "missing_frac": 0.6174794849556341,
+          "n_unique": 2064,
+          "min": 0.97,
+          "max": 49.72,
+          "mean": 6.699986047160597,
+          "median": 4.9,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 74945,
+          "n_missing": 74511,
+          "missing_frac": 0.9942090866635532,
+          "n_unique": 6,
+          "examples": [
+            "Workout",
+            "Walk",
+            "Weights"
+          ],
+          "id_candidate": true
+        },
+        "device": {
+          "dtype": "str",
+          "n": 74945,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 3,
+          "examples": [
+            "Fitbit Sense",
+            "Dexcom G6",
+            "Tandem t:slim X2"
+          ],
+          "id_candidate": true
+        }
+      }
+    },
+    {
+      "file": "P24.csv",
+      "n_rows": 178566,
+      "n_cols": 10,
+      "columns": {
+        "timestamp": {
+          "dtype": "str",
+          "n": 178566,
+          "n_missing": 0,
+          "missing_frac": 0.0,
+          "n_unique": 79692,
+          "timestamp_like": true,
+          "ts_min": "2023-06-01 00:00:00",
+          "ts_max": "2023-12-28 12:00:00",
+          "tz_aware": false,
+          "id_candidate": true
+        },
+        "bg": {
+          "dtype": "float64",
+          "n": 178566,
+          "n_missing": 119332,
+          "missing_frac": 0.6682795156972772,
+          "n_unique": 167,
+          "min": 2.2,
+          "max": 22.2,
+          "mean": 7.891781746969645,
+          "median": 7.4,
+          "id_candidate": false
+        },
+        "insulin": {
+          "dtype": "float64",
+          "n": 178566,
+          "n_missing": 117954,
+          "missing_frac": 0.6605624810994254,
+          "n_unique": 4781,
+          "min": 0.0,
+          "max": 27.4392,
+          "mean": 0.1820824952154689,
+          "median": 0.0729,
+          "id_candidate": false
+        },
+        "carbs": {
+          "dtype": "float64",
+          "n": 178566,
+          "n_missing": 177695,
+          "missing_frac": 0.9951222517164522,
+          "n_unique": 78,
+          "min": 2.0,
+          "max": 90.0,
+          "mean": 34.9804822043628,
+          "median": 35.0,
+          "id_candidate": false
+        },
+        "hr": {
+          "dtype": "float64",
+          "n": 178566,
+          "n_missing": 128791,
+          "missing_frac": 0.7212515260463918,
+          "n_unique": 850,
+          "min": 50.7,
+          "max": 157.3,
+          "mean": 77.57536514314414,
+          "median": 74.6,
+          "id_candidate": false
+        },
+        "dist": {
+          "dtype": "float64",
+          "n": 178566,
+          "n_missing": 146516,
+          "missing_frac": 0.8205145436421267,
+          "n_unique": 1958,
+          "min": 0.0,
+          "max": 582.8,
+          "mean": 39.336090483619344,
+          "median": 4.7,
+          "id_candidate": false
+        },
+        "steps": {
+          "dtype": "float64",
+          "n": 178566,
+          "n_missing": 146516,
+          "missing_frac": 0.8205145436421267,
+          "n_unique": 594,
+          "min": 0.0,
+          "max": 679.0,
+          "mean": 57.54705148205928,
+          "median": 7.0,
+          "id_candidate": false
+        },
+        "cals": {
+          "dtype": "float64",
+          "n": 178566,
+          "n_missing": 120556,
+          "missing_frac": 0.6751341240773719,
+          "n_unique": 992,
+          "min": 0.83,
+          "max": 43.32,
+          "mean": 6.4603623513187385,
+          "median": 4.23,
+          "id_candidate": false
+        },
+        "activity": {
+          "dtype": "str",
+          "n": 178566,
+          "n_missing": 177489,
+          "missing_frac": 0.993968616645946,
+          "n_unique": 4,
+          "examples": [
+            "Walk",
+            "Aerobic Workout",
+            "Outdoor Bike"
+          ],
+          "id_candidate": true
+        },
+        "device": {
+          "dtype": "str",
+          "n": 178566,
+          "n_missing": 1,
+          "missing_frac": 5.600170245175453e-06,
+          "n_unique": 3,
+          "examples": [
+            "Tandem t:slim X2",
+            "Dexcom G6",
+            "Fitbit Luxe"
+          ],
+          "id_candidate": true
+        }
+      }
+    }
+  ]
+}

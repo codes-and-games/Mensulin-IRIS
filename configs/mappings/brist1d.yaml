@@ -1,0 +1,26 @@
+audit_file: data/dictionaries/audit_brist1d.json
+audit_status: AUDITED
+basal_ffill_minutes: 0
+columns:
+  carb: carbs
+  glucose: bg
+  insulin_total: insulin
+  timestamp: timestamp
+dataset: brist1d
+device_type: BrisT1D processed CGM and pump data
+file_glob: '*.csv'
+grid_minutes: 5
+min_cgm_coverage: 0.7
+min_days_per_person: 7
+min_insulin_coverage: 0.9
+n_files_audited: 20
+person_id:
+  column: null
+  from: filename
+raw_dir: data/raw/brist1d/device_data/processed_state
+source_id: S17
+tz: Europe/London
+units:
+  carb: g
+  glucose: mmol/L
+  insulin_total: u_per_step

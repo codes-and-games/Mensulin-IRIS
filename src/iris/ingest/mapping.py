@@ -22,6 +22,7 @@ ROLES = ("timestamp", "glucose", "basal", "bolus", "insulin_total", "carb", "isf
 GLUCOSE_UNITS = {"mg/dl", "mmol/l"}
 BASAL_UNITS = {"u_per_h", "u_per_step"}
 INSULIN_STEP_UNITS = {"u_per_step"}
+CARB_UNITS = {"g", "serving_10g"}
 
 # keyword hints used ONLY to rank candidates in a DRAFT template; they are never accepted automatically.
 HINTS = {
@@ -65,8 +66,8 @@ def validate_mapping(m: dict, *, require_audited: bool = True) -> list[str]:
     for r in ("bolus", "insulin_total"):
         if r in cols and units.get(r) not in INSULIN_STEP_UNITS | {"u"}:
             errs.append(f"units.{r} must be 'u' (amount per record) or 'u_per_step'")
-    if "carb" in cols and units.get("carb") != "g":
-        errs.append("units.carb must be 'g'")
+    if "carb" in cols and units.get("carb") not in CARB_UNITS:
+        errs.append("units.carb must be 'g' or 'serving_10g' (1 serving = 10 g)")
     if int(m["grid_minutes"]) <= 0 or 1440 % int(m["grid_minutes"]):
         errs.append("grid_minutes must divide 1440")
     pid = m["person_id"]

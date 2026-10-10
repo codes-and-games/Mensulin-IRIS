@@ -71,6 +71,28 @@ def test_incomplete_insulin_never_guessed(tmp_path):
     assert len(bad) >= 1 and bad.tdd_u.isna().all()
 
 
+
+def test_carb_serving_conversion_to_grams(tmp_path):
+    d = _raw(tmp_path)
+    for f in sorted(d.glob("p*.csv")):
+        df = pd.read_csv(f)
+        df["carb_input"] = np.nan
+        df.loc[0, "carb_input"] = 1.0
+        df.to_csv(f, index=False)
+
+    mp = _mapping(tmp_path)
+    from iris.common.io import load_yaml
+    m = load_yaml(mp)
+    m["units"]["carb"] = "serving_10g"
+    dump_yaml(m, mp)
+
+    ingest_dataset(tmp_path, mp, "provisional")
+    pdy, _ = read_table(tmp_path / "data/processed/t_ds/person_day.parquet")
+
+    maxima = pdy.groupby("person_id")["carb_g"].max()
+    assert len(maxima) == 3
+    assert np.allclose(maxima.to_numpy(), 10.0)
+
 def test_mapping_gates(tmp_path):
     _raw(tmp_path); mp = _mapping(tmp_path)
     assert validate_mapping({"dataset": "x"}) != []
